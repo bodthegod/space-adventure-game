@@ -3,16 +3,20 @@
 
 import sys
 import random
+from items import items
 
 
 def game_prologue():
     """
     Displays game prologue text and lore to user
     """
-    print("incoming transmission... *bzzt* Survivor? Are you there? *bzzt* \n")
-    print("*bzzt* We have been waiting for you to wake up, and the Galaxy is in dire need of your help. *bzzt* \n")
-    print("*bzzt* We know you have the skills to assist the Galaxy. *bzzt* \n")
-    print("*bzzt* We are sending you the distress beacon co-ordinates now *bzzt* \ end of transmission \n")
+    print(
+        "\n"
+        "incoming transmission... *bzzt* Survivor? Are you there? *bzzt* \n"
+        "*bzzt* We have been waiting for you to wake up, and the Galaxy is in dire need of your help. *bzzt* \n"
+        "*bzzt* We know you have the skills to assist the Galaxy. *bzzt* \n"
+        "*bzzt* We are sending you the distress beacon co-ordinates now *bzzt* \ end of transmission \n"
+    )
 
 
 def start_game_select():
@@ -148,10 +152,23 @@ def distress_beacon_mission():
         print("Enter 1, 2 or 3 to choose a route.")
         distress_beacon_mission()
 
+def open_items():
+    """
+    Player can view items by pressing I
+    """
+    user_button = input(" ")
+    if "i" in user_button:
+        show_items()
+
+def show_items():
+    """
+    Shows items to user in console
+    """
+    print(items)
 
 def exit_game_select():
     """
-    Player can exit game by pressing x
+    Player can exit game by pressing X
     """
     user_button = input(" ")
     if "x" in user_button:
@@ -173,6 +190,7 @@ def main():
     game_prologue()
     start_game_select()
     game_instructions_select()
+    open_items()
     char_class_info()
     weapon_text()
     weapon_select()
