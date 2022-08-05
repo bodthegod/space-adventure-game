@@ -121,9 +121,9 @@ def distress_beacon_mission():
     """
     Gives the user options to solve the mission
     """
-    print("Yeah, it's me.")
+    print("'Yeah, it's me.'")
     print("*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt*")
-    print("I'm docking now / end of transmission \n")
+    print("'I'm docking now' / end of transmission \n")
 
     print("You dock the ship, and there are 3 pirates aiming in your direction, which way do you go?")
     print("(1) Start an attack on the pirates \n")
@@ -137,17 +137,24 @@ def distress_beacon_mission():
     elif "2" in select_answer:
         print("You hold the corner, the squad approach you and fire at you")
         print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
-        print("Woah...")
+        print("'Woah...'")
     elif "3" in select_answer:
         print("You wait and listen, hearing alien noises and footsteps towards you")
         print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
-        print("What was that...")
+        print("'What was that...'")
     else:
         print("Enter 1, 2 or 3 to choose a route.")
         distress_beacon_mission()
 
 
-
+def exit_game_select():
+    """
+    Player can exit game by pressing x
+    """
+    user_button = input(" ")
+    if "x" in user_button:
+        exit_game()
+        
 def exit_game():
     """
     Exits game
