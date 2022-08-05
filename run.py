@@ -51,7 +51,7 @@ def weapon_text():
     """
     Requests the player if they want the weapon to be selected
     """
-    request_weapon = input(f"It's time to walk over to the arsenal {char_name}, would you like to choose a weapon? (yes/no) \n")
+    request_weapon = input(f"It's time to walk over to the arsenal, would you like to choose a weapon? (yes/no) \n")
     if request_weapon == "yes":
         print("Your weapon shifts and clicks into gear, whirring ready to fire.")
     elif request_weapon == "no":
@@ -93,6 +93,7 @@ def main():
     start_game_select()
     choose_char_name()
     char_class_info()
+    weapon_text()
     weapon_select()
     
 
