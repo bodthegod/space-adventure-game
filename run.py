@@ -37,6 +37,7 @@ def choose_char_name():
     char_name = input("Choose your alien name:\n")
     print(f"Greetings, {char_name}")
 
+
 def char_class_info():
     """
     Prints class info and start to game lore
@@ -44,7 +45,23 @@ def char_class_info():
     print('"Hey, you!"')
     print('"In order to take over the galaxy, you may need one of these!"')
     print('"Walk over there to your arsenal and allow it to choose you."')
-    
+
+
+def weapon_text():
+    """
+    Requests the player if they want the weapon to be selected
+    """
+    request_weapon = input(f"It's time to walk over to the arsenal {char_name}, would you like to choose a weapon? (yes/no) \n")
+    if request_weapon == "yes":
+        print("Your weapon shifts and clicks into gear, whirring ready to fire.")
+    elif request_weapon == "no":
+        print("I can't help the galaxy without a weapon...")
+        exit_game()
+    else:
+        print("Please select yes or no")
+        weapon_text()
+
+
 def weapon_select():
     """
     Gives user a class for their character (random)
@@ -57,14 +74,7 @@ def weapon_select():
 
     random_class_choice = random.choice(class_choice)
 
-    print("Your weapon shifts and clicks into gear, whirring ready to fire.")
-    print(f"The {class_choice} speaks to you, levitating towards your fingertips")
-
-# def start_game():
-#     """
-#     Starts game
-#     """
-#     main()
+    print(f"The {random_class_choice} speaks to you, levitating towards your fingertips")
 
 
 def exit_game():
@@ -72,6 +82,7 @@ def exit_game():
     Exits game
     """
     sys.exit()
+
 
 def main():
     """
