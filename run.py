@@ -3,7 +3,6 @@
 
 import sys
 import random
-from items import items
 
 
 def game_prologue():
