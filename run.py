@@ -3,6 +3,15 @@
 import random
 
 
+def game_prologue():
+    """
+    Displays game prologue text and lore to user
+    """
+    print("incoming transmission... *bzzt* Survivor? Are you there? *bzzt*")
+    print("*bzzt* We have been waiting for you to wake up, and the Galaxy is in dire need of your help. *bzzt*")
+    print("*bzzt* We know you have the skills to assist the Galaxy. *bzzt*")
+    print("*bzzt* We are sending you the distress beacon co-ordinates now *bzzt* \ end of transmission")
+
 def start_game_select():
     """
     Gives user options to start or end game
@@ -55,6 +64,7 @@ def main():
     """
     Main function to call all functions
     """
+    game_prologue()
     start_game_select()
     choose_char_name()
     char_class_info()
