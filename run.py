@@ -70,9 +70,9 @@ def char_class_info():
     """
     Prints class info and start to game lore
     """
-    print('"Hey, you!"')
-    print('"In order to reclaim the galaxy, you may need one of these!"')
-    print('"Walk over there to your arsenal and allow it to choose you."')
+    print('*bzzt* Hey, you! *bzzt*')
+    print('*bzzt* In order to reclaim the galaxy, you may need one of these! *bzzt*')
+    print('*bzzt* Walk over there to your arsenal and allow it to choose you. *bzzt*')
 
 
 def weapon_text():
@@ -102,8 +102,20 @@ def weapon_select():
 
     random_class_choice = random.choice(class_choice)
 
-    print(f"The {random_class_choice} speaks to you, levitating towards your fingertips")
+    print(f"The {random_class_choice} speaks to you, levitating towards your fingertips \n")
 
+
+def first_ship_storyline():
+    """
+    Displays first ship storyline to user
+    """
+    print("*bzzt* That's it, you remember how to start one of these, don't you? *bzzt*")
+    print("*bzzt* You don't? just hit that big red button... *clonk* woahhhh! *bzzt*")
+    print("*Female AI voice* 'Quantum travel initiated' *spooling* \n")
+
+    print("*The ship sparks and sputters, inputting the co-ordinates of the distress beacon*")
+    print("*Time stops, the ship warps and a second later you appear in a new solar system*")
+    print("*bzzt* Is that you? *bzzt*")
 
 def exit_game():
     """
@@ -120,10 +132,10 @@ def main():
     game_prologue()
     start_game_select()
     game_instructions_select()
-    choose_char_name()
     char_class_info()
     weapon_text()
     weapon_select()
+    first_ship_storyline()
     
 
 main()
