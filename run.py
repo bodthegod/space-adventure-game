@@ -20,13 +20,13 @@ def start_game_select():
     """
     start_game_choice = input("Would you like to launch captain? yes/no \n")
     if start_game_choice == "yes":
-        print("*spooling* Whirring up engines *humming*")
+        print("*spooling* Whirring up engines *humming* \n")
         # start_game()
     elif start_game_choice == "no":
         print("Shutting down systems")
         exit_game()
     else:
-        print("To start or exit the game, enter the text 'yes' or 'no'.")
+        print("To start or exit the game, enter the text 'yes' or 'no'. \n")
         start_game_select()
 
 def game_instructions_select():
@@ -43,11 +43,26 @@ def game_instructions_select():
         print("Please select yes or no.")
         game_instructions_choice()
 
+
+def game_instructions():
+    """
+    Gives guide to the player about the game
+    """
+    print("Since you're here, we are going to tell the tale of the galaxy... \n")
+    print("The year is 3076, and humanity is on it's last legs...")
+    print("You awake from a cryofrozen chamber inside your ancient ship...")
+    print("Your ship is outdated as you have been frozen for over 500 years... \n")
+
+    print("You are the last Super Soldier...") 
+    print("Explore the options and choose wiseley...")
+    print("It may be the last choice you make... \n")
+
+
 def choose_char_name():
     """
     User selects space name
     """
-    char_name = input("Choose your alien name:\n")
+    char_name = input("Choose your name, survivor: \n")
     print(f"Greetings, {char_name}")
 
 
@@ -56,7 +71,7 @@ def char_class_info():
     Prints class info and start to game lore
     """
     print('"Hey, you!"')
-    print('"In order to take over the galaxy, you may need one of these!"')
+    print('"In order to reclaim the galaxy, you may need one of these!"')
     print('"Walk over there to your arsenal and allow it to choose you."')
 
 
@@ -104,6 +119,7 @@ def main():
     
     game_prologue()
     start_game_select()
+    game_instructions_select()
     choose_char_name()
     char_class_info()
     weapon_text()
