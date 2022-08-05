@@ -29,6 +29,19 @@ def start_game_select():
         print("To start or exit the game, enter the text 'yes' or 'no'.")
         start_game_select()
 
+def game_instructions_select():
+    """
+    Allows player to select if they want instructions 
+    """
+    game_instructions_choice = input("Do you want to hear the story of the galaxy before you begin? (yes/no) \n")
+    if game_instructions_choice == "yes":
+        game_instructions()
+    elif game_instructions_choice == "no":
+        print("Who needed to read that anyways...")
+        choose_char_name()
+    else:
+        print("Please select yes or no.")
+        game_instructions_choice()
 
 def choose_char_name():
     """
