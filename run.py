@@ -5,6 +5,7 @@ import sys
 import random
 
 
+
 def game_prologue():
     """
     Displays game prologue text and lore to user
@@ -61,6 +62,7 @@ def game_instructions():
     print("Explore the options and choose wiseley...")
     print("It may be the last choice you make... \n")
 
+    second_functions()
 
 def choose_char_name():
     """
@@ -151,19 +153,6 @@ def distress_beacon_mission():
         print("Enter 1, 2 or 3 to choose a route.")
         distress_beacon_mission()
 
-def open_items():
-    """
-    Player can view items by pressing I
-    """
-    user_button = input(" ")
-    if "i" in user_button:
-        show_items()
-
-def show_items():
-    """
-    Shows items to user in console
-    """
-    print(items)
 
 def exit_game_select():
     """
@@ -189,7 +178,10 @@ def main():
     game_prologue()
     start_game_select()
     game_instructions_select()
-    open_items()
+
+def second_functions():
+
+    choose_char_name()
     char_class_info()
     weapon_text()
     weapon_select()
@@ -198,3 +190,4 @@ def main():
     
 
 main()
+exit_game_select()
