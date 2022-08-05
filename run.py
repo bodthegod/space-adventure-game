@@ -117,6 +117,37 @@ def first_ship_storyline():
     print("*Time stops, the ship warps and a second later you appear in a new solar system*")
     print("*bzzt* Is that you? *bzzt*")
 
+def distress_beacon_mission():
+    """
+    Gives the user options to solve the mission
+    """
+    print("Yeah, it's me.")
+    print("*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt*")
+    print("I'm docking now / end of transmission \n")
+
+    print("You dock the ship, and there are 3 pirates aiming in your direction, which way do you go?")
+    print("(1) Start an attack on the pirates \n")
+    print("(2) Set up an ambush \n")
+    print("(3) Wait and listen for conflict \n")
+
+    select_answer = input("What do you do? (1,2,3) \n")
+
+    if "1" in select_answer:
+        print("You fire your weapon, tagging and eliminating all three pirates in a flurry")
+    elif "2" in select_answer:
+        print("You hold the corner, the squad approach you and fire at you")
+        print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
+        print("Woah...")
+    elif "3" in select_answer:
+        print("You wait and listen, hearing alien noises and footsteps towards you")
+        print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
+        print("What was that...")
+    else:
+        print("Enter 1, 2 or 3 to choose a route.")
+        distress_beacon_mission()
+
+
+
 def exit_game():
     """
     Exits game
@@ -136,6 +167,7 @@ def main():
     weapon_text()
     weapon_select()
     first_ship_storyline()
+    distress_beacon_mission()
     
 
 main()
