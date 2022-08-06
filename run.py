@@ -3,7 +3,7 @@
 
 import sys
 import random
-
+from choices import UserChoices
 
 
 def game_prologue():
@@ -23,14 +23,21 @@ def start_game_select():
     """
     Gives user options to start or end game
     """
-    start_game_choice = input("Would you like to launch captain? yes/no \n")
-    if start_game_choice == "yes":
-        print("*spooling* Whirring up engines *humming* \n")
-    elif start_game_choice == "no":
-        print("Shutting down systems \n")
+    start_game_choices = UserChoices(
+        "*spooling* Whirring up engines *humming* \n",
+        "Shutting down systems \n",
+        "To start or exit the game, enter the text 'yes' or 'no'. \n"
+        )
+
+    start_game_input = input("Would you like to launch captain? yes/no \n")
+    
+    if start_game_input == "yes":
+        print(start_game_choices.choice_yes)
+    elif start_game_input == "no":
+        print(start_game_choices.choice_no)
         exit_game()
     else:
-        print("To start or exit the game, enter the text 'yes' or 'no'. \n")
+        print(start_game_choices.choice_else)
         start_game_select()
 
 

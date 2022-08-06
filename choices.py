@@ -19,7 +19,7 @@ class UserChoices:
         Function runs if user selects yes
         """
         return (
-            f"\n {self.choice_yes} \n"
+            f"\n{self.choice_yes} \n"
         )
 
 
@@ -28,7 +28,7 @@ class UserChoices:
         Function runs if user selects no
         """
         return (
-            f"\n {self.choice_no} \n"
+            f"\n{self.choice_no} \n"
         )
 
 
@@ -37,5 +37,5 @@ class UserChoices:
         Function runs if user selects choice other than yes or no
         """
         return (
-            f"\n {self.choice_else}\n"
+            f"\n{self.choice_else}\n"
         )
