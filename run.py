@@ -43,24 +43,26 @@ def game_instructions_select():
         game_instructions()
     elif game_instructions_choice == "no":
         print("Who needed to read that anyways... \n")
-        choose_char_name()
+        second_functions()
     else:
         print("Please select yes or no. \n")
-        game_instructions_choice()
+        game_instructions_select()
 
 
 def game_instructions():
     """
     Gives guide to the player about the game
     """
-    print("\n Since you're here, we are going to tell the tale of the galaxy... \n")
-    print("The year is 3076, and humanity is on it's last legs...")
-    print("You awake from a cryofrozen chamber inside your ancient ship...")
-    print("Your ship is outdated as you have been frozen for over 500 years... \n")
+    print("\n" 
+    "Since you're here, we are going to tell the tale of the galaxy... \n"
+    "The year is 3076, and humanity is on it's last legs... \n"
+    "You awake from a cryofrozen chamber inside your ancient ship... \n"
+    "Your ship is outdated as you have been frozen for over 500 years... \n")
 
-    print("You are the last Super Soldier...") 
-    print("Explore the options and choose wiseley...")
-    print("It may be the last choice you make... \n")
+    print("\n" 
+    "You are the last Super Soldier... \n"
+    "Explore the options and choose wiseley... \n"
+    "It may be the last choice you make... \n")
 
     second_functions()
 
@@ -76,9 +78,10 @@ def char_class_info():
     """
     Prints class info and start to game lore
     """
-    print('*bzzt* Hey, you! *bzzt*')
-    print('*bzzt* In order to reclaim the galaxy, you may need one of these! *bzzt*')
-    print('*bzzt* Walk over there to your arsenal and allow it to choose you. *bzzt*')
+    print("\n"
+    "*bzzt* Hey, you! *bzzt* \n"
+    "*bzzt* In order to reclaim the galaxy, you may need one of these! *bzzt* \n"
+    "*bzzt* Walk over there to your arsenal and allow it to choose you. *bzzt* \n")
 
 
 def weapon_text():
@@ -115,40 +118,46 @@ def first_ship_storyline():
     """
     Displays first ship storyline to user
     """
-    print("*bzzt* That's it, you remember how to start one of these, don't you? *bzzt*")
-    print("*bzzt* You don't? just hit that big red button... *clonk* woahhhh! *bzzt* \n")
-    print("*Female AI voice* 'Quantum travel initiated' *spooling* \n")
+    print("\n"
+    "*bzzt* That's it, you remember how to start one of these, don't you? *bzzt* \n"
+    "*bzzt* You don't? just hit that big red button... *clonk* woahhhh! *bzzt* \n"
+    "*Female AI voice* 'Quantum travel initiated' *spooling* \n")
 
-    print("*The ship sparks and sputters, inputting the co-ordinates of the distress beacon*")
-    print("*Time stops, the ship warps and a second later you appear in a new solar system* \n")
-    print("*bzzt* Is that you? *bzzt* \n")
+    print("\n"
+    "*The ship sparks and sputters, inputting the co-ordinates of the distress beacon* \n"
+    "*Time stops, the ship warps and a second later you appear in a new solar system* \n"
+    "*bzzt* Is that you? *bzzt* \n")
 
 
 def distress_beacon_mission():
     """
     Gives the user options to solve the mission
     """
-    print("'Yeah, it's me.' \n")
-    print("*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt*")
-    print("\n 'I'm docking now' / end of transmission \n")
+    print("\n"
+    "'Yeah, it's me.' \n"
+    "*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt* \n"
+    "'I'm docking now' / end of transmission \n")
 
-    print("You dock the ship, and there are 3 pirates aiming in your direction, which way do you go?")
-    print("(1) Start an attack on the pirates \n")
-    print("(2) Set up an ambush \n")
-    print("(3) Wait and listen for conflict \n")
+    print("\n"
+    "You dock the ship, and there are 3 pirates aiming in your direction, which way do you go? \n"
+    "(1) Start an attack on the pirates \n"
+    "(2) Set up an ambush \n"
+    "(3) Wait and listen for conflict \n")
 
     select_answer = input("What do you do? (1,2,3) \n")
 
     if "1" in select_answer:
         print("You fire your weapon, tagging and eliminating all three pirates in a flurry")
     elif "2" in select_answer:
-        print("You hold the corner, the squad approach you and fire at you")
-        print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
-        print("'Woah...'")
+        print("\n"
+        "You hold the corner, the squad approach you and fire at you \n"
+        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
+        "'Woah...' \n")
     elif "3" in select_answer:
-        print("You wait and listen, hearing alien noises and footsteps towards you")
-        print("Your weapon overloads with energy, firing at it's own will and eliminates the targets")
-        print("'What was that...'")
+        print("\n"
+        "You wait and listen, hearing alien noises and footsteps towards you \n"
+        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
+        "'What was that...' \n")
     else:
         print("Enter 1, 2 or 3 to choose a route.")
         distress_beacon_mission()
