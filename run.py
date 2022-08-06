@@ -45,14 +45,24 @@ def game_instructions_select():
     """
     Allows player to select if they want instructions 
     """
-    game_instructions_choice = input("Do you want to hear the story of the galaxy before you begin? (yes/no) \n")
-    if game_instructions_choice == "yes":
+    game_instructions_choices = UserChoices(
+        "Since you're here, we are going to tell the tale of the galaxy... \n",
+        "Who needed to read that anyways... \n",
+        "Please select yes or no. \n") 
+     
+     
+    game_instructions_input = input(
+        "Do you want to hear the story of the galaxy before you begin? (yes/no) \n"
+        )
+
+    if game_instructions_input == "yes":
+        print(game_instructions_choices.choice_yes)
         game_instructions()
-    elif game_instructions_choice == "no":
-        print("Who needed to read that anyways... \n")
+    elif game_instructions_input == "no":
+        print(game_instructions_choices.choice_no)
         second_functions()
     else:
-        print("Please select yes or no. \n")
+        print(game_instructions_input.choice_else)
         game_instructions_select()
 
 
@@ -61,7 +71,6 @@ def game_instructions():
     Gives guide to the player about the game
     """
     print("\n" 
-    "Since you're here, we are going to tell the tale of the galaxy... \n"
     "The year is 3076, and humanity is on it's last legs... \n"
     "You awake from a cryofrozen chamber inside your ancient ship... \n"
     "Your ship is outdated as you have been frozen for over 500 years... \n")
