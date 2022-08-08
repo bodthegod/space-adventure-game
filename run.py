@@ -62,7 +62,7 @@ def game_instructions_select():
         print(game_instructions_choices.choice_no)
         second_functions()
     else:
-        print(game_instructions_input.choice_else)
+        print(game_instructions_choices.choice_else)
         game_instructions_select()
 
 
