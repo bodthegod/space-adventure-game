@@ -8,15 +8,26 @@ from choices import UserChoices
 
 # slowprint taken from https://www.codegrepper.com/code-examples/python/python+slow+print
 def slowprint(strings):
-	for text_c in strings + '\n':
+	for text_c in strings + '\n \n':
 		sys.stdout.write(text_c)
 		sys.stdout.flush()
-		time.sleep(1./20)
+		time.sleep(0./20)
+
+
+def spacing():
+    """
+    Creates spacing between dialogue to improve readability of game
+    """
+    print()
+
+spacing()
 
 def game_prologue():
     """
     Displays game prologue text and lore to user
     """
+    spacing()
+
     slowprint(
         "\n"
         "incoming transmission... *bzzt* Survivor? Are you there? *bzzt* \n"
@@ -30,14 +41,18 @@ def start_game_select():
     """
     Gives user options to start or end game
     """
+    spacing()
+
     start_game_choices = UserChoices(
         "*spooling* Whirring up engines *humming* \n",
         "Shutting down systems \n",
         "To start or exit the game, enter the text 'yes' or 'no'. \n"
         )
-
+    
     start_game_input = input("Would you like to launch captain? yes/no \n")
     
+    spacing()
+
     if start_game_input == "yes":
         slowprint(start_game_choices.choice_yes)
     elif start_game_input == "no":
@@ -52,15 +67,17 @@ def game_instructions_select():
     """
     Allows player to select if they want instructions 
     """
+    spacing()
+
     game_instructions_choices = UserChoices(
         "Since you're here, we are going to tell the tale of the galaxy... \n",
         "Who needed to read that anyways... \n",
         "Please select yes or no. \n") 
      
      
-    game_instructions_input = input(
-        "Do you want to hear the story of the galaxy before you begin? (yes/no) \n"
-        )
+    game_instructions_input = input("Do you want to hear the story of the galaxy before you begin? (yes/no) \n")
+    
+    spacing()
 
     if game_instructions_input == "yes":
         slowprint(game_instructions_choices.choice_yes)
@@ -89,12 +106,14 @@ def game_instructions():
 
     second_functions()
 
+
 def choose_char_name():
     """
     User selects space name
     """
     char_name = input("Choose your name, survivor: \n")
-    slowprint(f"Greetings, {char_name}")
+    spacing()
+    slowprint(f"*Your ship greets you* Greetings, {char_name}")
 
 
 def char_class_info():
@@ -112,6 +131,9 @@ def weapon_text():
     Requests the player if they want the weapon to be selected
     """
     request_weapon = input("It's time to walk over to the arsenal, would you like to choose a weapon? (yes/no)\n")
+    
+    spacing()
+    
     if request_weapon == "yes":
         slowprint("Your weapon shifts and clicks into gear, whirring ready to fire. \n")
     elif request_weapon == "no":
@@ -162,12 +184,14 @@ def distress_beacon_mission():
     "'I'm docking now' / end of transmission \n")
 
     slowprint("\n"
-    "You dock the ship, and there are 3 pirates aiming in your direction, which way do you go? \n"
+    "You dock the ship, and there are 3 pirates aiming in your direction, what do you do? \n"
     "(1) Start an attack on the pirates \n"
     "(2) Set up an ambush \n"
     "(3) Wait and listen for conflict \n")
 
     select_answer = input("What do you do? (1,2,3) \n")
+    
+    spacing()
 
     if "1" in select_answer:
         slowprint("You fire your weapon, tagging and eliminating all three pirates in a flurry")
@@ -210,6 +234,7 @@ def main():
     game_prologue()
     start_game_select()
     game_instructions_select()
+
 
 def second_functions():
 
