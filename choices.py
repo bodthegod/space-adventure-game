@@ -18,24 +18,18 @@ class UserChoices:
         """
         Function runs if user selects yes
         """
-        return (
-            f"\n{self.choice_yes} \n"
-        )
+        return f"\n{self.choice_yes} \n"
 
 
     def no_choice(self):
         """
         Function runs if user selects no
         """
-        return (
-            f"\n{self.choice_no} \n"
-        )
+        return f"\n{self.choice_no} \n"
 
 
     def else_choice(self):
         """
         Function runs if user selects choice other than yes or no
         """
-        return (
-            f"\n{self.choice_else}\n"
-        )
+        return f"\n{self.choice_else} \n"
