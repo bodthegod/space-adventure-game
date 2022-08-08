@@ -11,7 +11,7 @@ def slowprint(strings):
 	for text_c in strings + '\n':
 		sys.stdout.write(text_c)
 		sys.stdout.flush()
-		time.sleep(1./10)
+		time.sleep(1./20)
 
 def game_prologue():
     """
