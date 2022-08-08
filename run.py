@@ -2,15 +2,22 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import sys
+import time
 import random
 from choices import UserChoices
 
+# slowprint taken from https://www.codegrepper.com/code-examples/python/python+slow+print
+def slowprint(strings):
+	for text_c in strings + '\n':
+		sys.stdout.write(text_c)
+		sys.stdout.flush()
+		time.sleep(1./10)
 
 def game_prologue():
     """
     Displays game prologue text and lore to user
     """
-    print(
+    slowprint(
         "\n"
         "incoming transmission... *bzzt* Survivor? Are you there? *bzzt* \n"
         "*bzzt* We have been waiting for you to wake up, and the Galaxy is in dire need of your help. *bzzt* \n"
@@ -32,12 +39,12 @@ def start_game_select():
     start_game_input = input("Would you like to launch captain? yes/no \n")
     
     if start_game_input == "yes":
-        print(start_game_choices.choice_yes)
+        slowprint(start_game_choices.choice_yes)
     elif start_game_input == "no":
-        print(start_game_choices.choice_no)
+        slowprint(start_game_choices.choice_no)
         exit_game()
     else:
-        print(start_game_choices.choice_else)
+        slowprint(start_game_choices.choice_else)
         start_game_select()
 
 
@@ -56,13 +63,13 @@ def game_instructions_select():
         )
 
     if game_instructions_input == "yes":
-        print(game_instructions_choices.choice_yes)
+        slowprint(game_instructions_choices.choice_yes)
         game_instructions()
     elif game_instructions_input == "no":
-        print(game_instructions_choices.choice_no)
+        slowprint(game_instructions_choices.choice_no)
         second_functions()
     else:
-        print(game_instructions_choices.choice_else)
+        slowprint(game_instructions_choices.choice_else)
         game_instructions_select()
 
 
@@ -70,12 +77,12 @@ def game_instructions():
     """
     Gives guide to the player about the game
     """
-    print("\n" 
+    slowprint("\n" 
     "The year is 3076, and humanity is on it's last legs... \n"
     "You awake from a cryofrozen chamber inside your ancient ship... \n"
     "Your ship is outdated as you have been frozen for over 500 years... \n")
 
-    print("\n" 
+    slowprint("\n" 
     "You are the last Super Soldier... \n"
     "Explore the options and choose wiseley... \n"
     "It may be the last choice you make... \n")
@@ -87,14 +94,14 @@ def choose_char_name():
     User selects space name
     """
     char_name = input("Choose your name, survivor: \n")
-    print(f"Greetings, {char_name}")
+    slowprint(f"Greetings, {char_name}")
 
 
 def char_class_info():
     """
     Prints class info and start to game lore
     """
-    print("\n"
+    slowprint("\n"
     "*bzzt* Hey, you! *bzzt* \n"
     "*bzzt* In order to reclaim the galaxy, you may need one of these! *bzzt* \n"
     "*bzzt* Walk over there to your arsenal and allow it to choose you. *bzzt* \n")
@@ -106,12 +113,12 @@ def weapon_text():
     """
     request_weapon = input("It's time to walk over to the arsenal, would you like to choose a weapon? (yes/no)\n")
     if request_weapon == "yes":
-        print("Your weapon shifts and clicks into gear, whirring ready to fire. \n")
+        slowprint("Your weapon shifts and clicks into gear, whirring ready to fire. \n")
     elif request_weapon == "no":
-        print("I can't help the galaxy without a weapon... \n")
+        slowprint("I can't help the galaxy without a weapon... \n")
         exit_game()
     else:
-        print("Please select yes or no \n")
+        slowprint("Please select yes or no \n")
         weapon_text()
 
 
@@ -127,19 +134,19 @@ def weapon_select():
 
     random_class_choice = random.choice(class_choice)
 
-    print(f"The {random_class_choice} speaks to you, levitating towards your fingertips \n")
+    slowprint(f"The {random_class_choice} speaks to you, levitating towards your fingertips \n")
 
 
 def first_ship_storyline():
     """
     Displays first ship storyline to user
     """
-    print("\n"
+    slowprint("\n"
     "*bzzt* That's it, you remember how to start one of these, don't you? *bzzt* \n"
     "*bzzt* You don't? just hit that big red button... *clonk* woahhhh! *bzzt* \n"
     "*Female AI voice* 'Quantum travel initiated' *spooling* \n")
 
-    print("\n"
+    slowprint("\n"
     "*The ship sparks and sputters, inputting the co-ordinates of the distress beacon* \n"
     "*Time stops, the ship warps and a second later you appear in a new solar system* \n"
     "*bzzt* Is that you? *bzzt* \n")
@@ -149,12 +156,12 @@ def distress_beacon_mission():
     """
     Gives the user options to solve the mission
     """
-    print("\n"
+    slowprint("\n"
     "'Yeah, it's me.' \n"
     "*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt* \n"
     "'I'm docking now' / end of transmission \n")
 
-    print("\n"
+    slowprint("\n"
     "You dock the ship, and there are 3 pirates aiming in your direction, which way do you go? \n"
     "(1) Start an attack on the pirates \n"
     "(2) Set up an ambush \n"
@@ -163,19 +170,19 @@ def distress_beacon_mission():
     select_answer = input("What do you do? (1,2,3) \n")
 
     if "1" in select_answer:
-        print("You fire your weapon, tagging and eliminating all three pirates in a flurry")
+        slowprint("You fire your weapon, tagging and eliminating all three pirates in a flurry")
     elif "2" in select_answer:
-        print("\n"
+        slowprint("\n"
         "You hold the corner, the squad approach you and fire at you \n"
         "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
         "'Woah...' \n")
     elif "3" in select_answer:
-        print("\n"
+        slowprint("\n"
         "You wait and listen, hearing alien noises and footsteps towards you \n"
         "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
         "'What was that...' \n")
     else:
-        print("Enter 1, 2 or 3 to choose a route.")
+        slowprint("Enter 1, 2 or 3 to choose a route.")
         distress_beacon_mission()
 
 
