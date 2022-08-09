@@ -178,9 +178,9 @@ def first_ship_storyline():
     "*bzzt* Is that you? *bzzt* \n")
 
     slowprint("\n"
-    "'Yeah, it's me.' \n"
+    "You: 'Yeah, it's me.' \n"
     "*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt* \n"
-    "'I'm docking now' / end of transmission \n")
+    "You: 'I'm docking now' / end of transmission \n")
 
 def distress_beacon_mission():
     """
@@ -190,10 +190,10 @@ def distress_beacon_mission():
         "You fire your weapon, tagging and eliminating all three pirates in a flurry",
         "You hold the corner, the squad approach you and fire at you \n"
         "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
-        "'Woah...' \n",
+        "You: 'Woah...' \n",
         "You wait and listen, hearing alien noises and footsteps towards you \n"
         "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
-        "'What was that...' \n",
+        "You: 'What was that...' \n",
         "Enter 1, 2 or 3 to choose a route."
 
     )
@@ -211,14 +211,61 @@ def distress_beacon_mission():
 
     if "1" in select_answer:
         slowprint(distress_mission_choices.number_one)
+        distress_beacon_storyline()
     elif "2" in select_answer:
         slowprint(distress_mission_choices.number_two)
+        distress_beacon_storyline()
     elif "3" in select_answer:
         slowprint(distress_mission_choices.number_three)
+        distress_beacon_storyline()
     else:
         slowprint(distress_mission_choices.number_else)
         distress_beacon_mission()
 
+def distress_beacon_storyline():
+    """
+    Displays distress beacon storyline to player
+    """
+    slowprint("\n"
+    "There is an eerie silence... what were they? \n"
+    "*cockpit door clonks and beeps, the alien over the phone emerges* \n"
+    )
+
+    slowprint("\n"
+    "'Thank you, soldier. Our ship was taken over a few hours ago and it's been dead in the water.'\n"
+    "'Bidalgan pirates are one of the most dangerous species in the Galaxy, I saw your signature appear on my radar' \n"
+    "'How did you?...'\n")
+
+    slowprint("\n"
+    "You: 'I don't understand it either, but it's best we don't question it.' \n"
+    "'We still need assistance, the Bidalgans reside on planet Bid and they're quickly conquering all power in the galaxy' \n"
+    "'Will you help us?' \n")
+
+def distress_beacon_select():
+    """
+    Allows player to select the storyline they want to go with 
+    """
+    spacing()
+
+    distress_beacon_choices = UserChoices(
+        "You nod your head, agreeing to help \n",
+        "You shake your head, choosing your own path \n",
+        "Please select yes or no. \n") 
+     
+     
+    distress_beacon_input = input("Do you want to help the Galaxy? (yes/no) \n")
+    
+    spacing()
+
+    if distress_beacon_input == "yes":
+        slowprint(distress_beacon_choices.choice_yes)
+        pirate_dogfight_mission()
+    elif distress_beacon_input == "no":
+        slowprint(distress_beacon_choices.choice_no)
+        bounty_hunt_mission()
+    else:
+        slowprint(distress_beacon_choices.choice_else)
+        distress_beacon_select()
 
 def exit_game_select():
     """
@@ -254,6 +301,8 @@ def second_functions():
     weapon_select()
     first_ship_storyline()
     distress_beacon_mission()
+    # distress_beacon_storyline()
+    distress_beacon_select()
     
 
 main()
