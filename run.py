@@ -5,13 +5,17 @@ import sys
 import time
 import random
 from choices import UserChoices
+from choices import UserNumbers
 
-# slowprint taken from https://www.codegrepper.com/code-examples/python/python+slow+print
+
+# slowprint taken from 
+# https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing 
+# and https://www.codegrepper.com/code-examples/python/python+slow+print
 def slowprint(strings):
 	for text_c in strings + '\n \n':
 		sys.stdout.write(text_c)
 		sys.stdout.flush()
-		time.sleep(0./20)
+		time.sleep(0/20)
 
 
 def spacing():
@@ -173,15 +177,27 @@ def first_ship_storyline():
     "*Time stops, the ship warps and a second later you appear in a new solar system* \n"
     "*bzzt* Is that you? *bzzt* \n")
 
+    slowprint("\n"
+    "'Yeah, it's me.' \n"
+    "*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt* \n"
+    "'I'm docking now' / end of transmission \n")
 
 def distress_beacon_mission():
     """
     Gives the user options to solve the mission
     """
-    slowprint("\n"
-    "'Yeah, it's me.' \n"
-    "*bzzt* Finally!, we're under attack and there are bidalgan pirates boarding our ship! *bzzt* \n"
-    "'I'm docking now' / end of transmission \n")
+    distress_mission_choices = UserNumbers(
+        "You fire your weapon, tagging and eliminating all three pirates in a flurry",
+        "You hold the corner, the squad approach you and fire at you \n"
+        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
+        "'Woah...' \n",
+        "You wait and listen, hearing alien noises and footsteps towards you \n"
+        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
+        "'What was that...' \n",
+        "Enter 1, 2 or 3 to choose a route."
+
+    )
+
 
     slowprint("\n"
     "You dock the ship, and there are 3 pirates aiming in your direction, what do you do? \n"
@@ -189,24 +205,18 @@ def distress_beacon_mission():
     "(2) Set up an ambush \n"
     "(3) Wait and listen for conflict \n")
 
-    select_answer = input("What do you do? (1,2,3) \n")
-    
+    select_answer = input("Select (1,2,3) \n")
+
     spacing()
 
     if "1" in select_answer:
-        slowprint("You fire your weapon, tagging and eliminating all three pirates in a flurry")
+        slowprint(distress_mission_choices.number_one)
     elif "2" in select_answer:
-        slowprint("\n"
-        "You hold the corner, the squad approach you and fire at you \n"
-        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
-        "'Woah...' \n")
+        slowprint(distress_mission_choices.number_two)
     elif "3" in select_answer:
-        slowprint("\n"
-        "You wait and listen, hearing alien noises and footsteps towards you \n"
-        "Your weapon overloads with energy, firing at it's own will and eliminates the targets \n"
-        "'What was that...' \n")
+        slowprint(distress_mission_choices.number_three)
     else:
-        slowprint("Enter 1, 2 or 3 to choose a route.")
+        slowprint(distress_mission_choices.number_else)
         distress_beacon_mission()
 
 
