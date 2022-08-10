@@ -43,105 +43,91 @@ This game is run on the Code Institute mock terminal on heroku.
     2. To play the game, it is very simple. You as the user are given the ability to choose yes or no, and when presented missions you can select 1, 2 or 3.
     3. The player is randomly selected a weapon at the start of the game, and there are many opportunities for the player to decide what they do, which has impact on the storyline.
 
--   ### Features
+## Features
 
-    -   #### Existing Features
+### Existing Features
 
-        -   
+- #### Button
+
+    ![Button](/assets/images/space-adventure-button.png)
+
+    - This is the button that is already displayed via the Code Institute template I was given, which allows the user to play the game. 
+- #### Game Prologue
+-   ![Game Prologue](/assets/images/)    
+    - This is the game prologue screen that shows text art to allow the user to have a creative image of what the game is about and some basic information about the storyline.
+- #### Story Info
+-   ![Story Info](/assets/images/space-adventure-first-q.png)
+    - The player is shown a yes / no question asking them if they want to hear the story of the game. The user can type yes or no to progress the storyline.
+- #### Name Selection
+-   ![Name Selection](/assets/images/space-adventure-name.png)
+    - The player is told to choose a name for their character, improving interactivity and immersion within the game.
+- #### Weapon Choice
+-   ![Weapon Choice](/assets/images/)
+    - The player is shown a yes / no question asking them if they would like to choose a weapon. This weapon is randomly selected out of a list of 4 options and then given to the user.
+- #### First Mission
+-   ![First Mission](/assets/images/)
+    - Once the player selects the weapon, the text for the first mission is displayed and lore is also displayed for the user to understand the storyline. The player is then displayed an option of three different scenarios, that advances the storyline once chosen.
+- #### Second Mission Select
+-   ![Second Mission Select](/assets/images/)
+    - Once the first mission is complete, the player is given a yes or no question which advances the storyline in two different paths. 
         
-
     -   #### Future Features
 
-        -   
+        -   A feature that could be added are inventory functions that may change the storyline depending on the item.
+        -   More paths for the user to generate and more impactful storyline changes.
+        -   A nicer CLI interface or background for the user to be more immersed in the storyline.
+        -   Text art that displays on missions.
 
-    -   #### Data Model
+## Data Model
 
-        -   
+### Functions
 
-    *   ### Wireframes
+-   Functions are used on questions, choices and selections to prevent the code from being too repetitive and unreadable.
+-   Functions allow for progression through the story by calling certain functions once specific answers are selected.
+
+### Variables
+-   Variables are used to link to classes that are within the choices.py file, to allow for simplified and easier code to write when developing the creating new questions to add to the storyline.
+-   Input variables are also used to allow the user to input data into the terminal.
+
+### Classes
+-   Classes are used on the questions within the games, to allow for multiple functions that can be called from an external file. This allows for the code to be more readable, and allows for faster development time of new questions.
+-   The classes i have created allow for the selection of numbers to be called, and selection of yes/no and else questions.
+
+-   ### Wireframes
         
-    -   I have used [Balsamiq Wireframes](https://balsamiq.com/) as my desired wireframing tool for this quiz, as it is very easy to use. However, due to these being wireframes, the final image of the quiz may be depicted differently yet these are base guidelines of my website, and the image I would like to achieve. Here I have created Start button, Game guide, Game area and Final score screen wireframes. As this quiz maintains consistency of look on both mobile and desktop views, the wireframes are the same.    
+-   I have used [Balsamiq Wireframes](https://balsamiq.com/) as my desired wireframing tool for this, and I kept the game simple by simply using the Command Line Interface to play it. It is very easy to play the game as the user is instructed on how to play, what to type etc.   
 
-    -   Start Button Desktop and Mobile Wireframe - [View](/wireframes/Start-btn-wf.png)
-
-    -   Guide Area Desktop and Mobile Wireframe - [View](/wireframes/Guide-wf.png)
-
-    -   Game Area Desktop and Mobile Wireframe - [View](/wireframes/Game-area-wf.png)
-
-    -   Final Score Desktop and Mobile Wireframe - [View](/wireframes/Final-score-wf.png)
-
-
-### Screenshots and features within website
-#### **(I have provided screenshots via links to make the screenshots section more readable)**
-####   All Sections
--   [Start Button](/readmeimages/start-btn-ss.png) This screenshot shows the landing page of my quiz website, and this is the page a user will see every time they load up the site. This is a simple but effective way to catch the user's attention, as there is only one single button to be viewed, on an eye catching background. This button, upon hover- displays a gradient green to black background within the button, and a white box shadow, white text and white border to emphasise the user interaction. Once this button is clicked, it will display the guide box for the user to read and understand how to play the game. 
-    
--   [Guide Box](/readmeimages/guide-box-ss.png) This screenshot shows the guide box- as stated above, this box is displayed once the start button is clicked. This guide shows a list of three to keep the user interested and to keep the game simple. The guide box consists of two buttons, a quit game and continue game button. When the quit game button is pressed, it takes the user back to the start button and when the continue game button is pressed, the game area box is presented and the game starts.
-    
--   [Game Area](/readmeimages/game-box-ss.png) This portion of the website is the main part that uses JavaScript, and this consists of the game title, time remaining counter, question display, answer display, progress bar on desktop, question counter and finally the next button. Here, the time remaining counter is displayed via JavaScript and counts from 5 down to 0, and when a question is selected, the timer and progress bar pauses, the next button is displayed and the answer selections are muted to lock in the answer the user has chosen. All of the data within this section is stored within the qdata JavaScript file that I have created.
-
--   [Game Area Active](/readmeimages/game-box-active-ss.png) In this screenshot it shows the active status of the answers. If the time runs out on the counter then the correct answer is displayed to the user with green gradient background- without a tick next to it to indicate the user has not chosen the correct answer. When the correct answer is selected, the tick is displayed. On the contrary, when a user selects the incorrect answer a red gradient background is displayed on the answer they have chosen. When the next button is clicked, it displays the next question from the qdata file, defined by qnumber.
-    
--   [Final Score Box](/readmeimages/final-score-ss.png) Finally, the final score box is displayed after the 10th question is answered and the next button is clicked. This section is very simple but displays a couple icons from FontAwesome, these being two cakes and a checkered flag to show the user is finished. Furthermore, the score the user achieved throughout the quiz is displayed at the end, and mutliple different messages are shown regarding the score they got. There are also two buttons at the end being the start again button and the quit game button. If the start again button is selected then the quiz restarts from question one and the counter is set to go again. If the quit game button is selected then the user is taken back to the start button.
-   
+![View](/assets/images/space-adventure-wireframe.png)
 
 ### Languages Used
 
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
-
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language)
-
-
-### Resources Used
-
-
--   I have used the W3 [HTML](https://validator.w3.org/#validate_by_input) and [CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) validator, the [JavaScript](https://jshint.com/) validator and occasionally the [W3Schools](https://www.w3schools.com/) resources when I had an issues.
-
--   For my box shadows and box border radius, I used [BoxShadowGenerator](https://html-css-js.com/css/generator/box-shadow/)
-
--   I used [1stwebdesigner](https://1stwebdesigner.com/15-css-background-effects/) For help with the gradient animation background.
-
--   For testing my website on different screen sizes, I used Google Chrome Dev Tools.
-
--   For media query info, I used [W3Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
-
--   For styling inspiration, I used [ColorMind](http://colormind.io/bootstrap/)
-
--   For font styles, I used [Google Fonts](https://fonts.google.com/)
-
--   Colours were all checked with [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%23404040%2C%20Charcoal%0D%0A%23000000%2C%20Black%0D%0A%232F78C5%2C%20Effective%20on%20Extremes%0D%0A%230F60B6%2C%20Effective%20on%20Lights%0D%0A%23398EEA%2C%20Ineffective%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
-
--   Icons within the answer selection boxes and final score box were from [Font Awesome](https://fontawesome.com/)
-
--   To create the favicons I used [Favicon.io](https://favicon.io/favicon-generator/)
-
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the fonts into the style.css file which is used throughout the whole project (maintains a certain style).
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on The final score box for the finish icons and the time icon within the game area, and tick and cross icons.
-1. [Git](https://git-scm.com/)
+1. [Git:](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub, this was used throughout the development of the website
     and was essential.
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](/wireframes/) during the design process.
-
+    - Balsamiq was used to create the wiireframes during the design process.
+1. [import time:](https://docs.python.org/3/library/time.html)
+    - Import time was used for the slowprint function to work correctly, as it works based on times.
+1. [import sys:](https://www.tutorialsteacher.com/python/sys-module)
+    - This was used to exit the loop on the exit function (sys.exit).
+1. [import random:](https://docs.python.org/3/library/random.html)
+    - I used import random to pick from a list of 4 what weapon the player is given when they select yes.
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. In addition to this, I used Chrome Dev tools very often to play around with the code and test when I was having issues. I found this was extremely important when troubleshooting issues- as I could change the code and see the changes live, instead of having to save the file and force refresh (If I changed the CSS code). I had also used the console and console.log feature within javascript to test wether the programming was functioning as intended, which was very helpful.
 
-The use of chrome dev tools allowed me to play around with the breakpoints for different screen sizes, and helped me achieve the look I desire for on smaller screen sizes.
+### Python Results
 
-## Python Results
-
--   [W3C Markup Validator](https://validator.w3.org/)
--   [index.html Results](/readmeimages/html-validation.png)
+-   [PEP8 Validator](http://pep8online.com/)
+    - Results of run.py
+    ![Results]()
+    - Results of choices.py
+    ![Results]()
 
 
 
@@ -151,11 +137,15 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 
 ### Manual Testing
 
--    
+-   To test my code, I have checked and tested multiple different things to see if the code would function incorrectly. First, I test if the standard answers (yes/no, 1,2,3) function correctly and display the correct message by entering them. When testing this, I found that there was occasionally a bug that forced a loop of the letter 'y' in the console, to prevent this I recreated the way my functions worked by using methods.
+
+-   Second of all, I tested the inputs by testing the else options- these being any characted that isn't the one defined in the input. To test this, I entered random numbers and letters to test if the else messages would appear, and I coded this correctly as there were no bugs found.
+
+-   I showed this project to a few family members, to see if they would give me any advice from a user standpoint on things to improve, and used this information to improve the game.
 
 ### Known Bugs
 
--   
+-   A bug that can take away from the player experience is a bug that allows the user to input data as the text displays, this can bug the whole game causing the required message to send multiple times.
 
 ## Deployment
 
@@ -174,13 +164,6 @@ This project was deployed using Code Institute's mock terminal for Heroku
 
 ## Credits
 
--   For information regarding the timer, credits to [educative.io](https://www.educative.io/answers/how-to-create-a-countdown-timer-using-javascript)
--   For inspiration of the design and features of my quiz, credits to [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
--   To troubleshoot problems I had when defining media queries, I used [Stack Overflow](https://stackoverflow.com/questions/21441993/media-queries-doesnt-work)
--   Credits to my mentor Darío for encouraging me to continue to add things to improve my project.
--   Credits to this website for information regarding javascript [W3 Schools](https://www.w3schools.com/js/js_if_else.asp)
--   For design inspiration, I used [Scheme Color](https://www.schemecolor.com/matrix-code-green.php)
--   For early inspiration of the website I followed [Brian Design on Youtube](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
--   For arrow functions, I used [W3 Schools](https://www.w3schools.com/js/js_arrow_function.asp)
--   For more design inspiration, I used [Coding Nepal](https://www.codingnepalweb.com/quiz-app-with-timer-javascript/)
+-   For the gradual slowprint code, this was taken and inspired by [Stack Overflow](https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing) and [Codegrepper](https://www.codegrepper.com/code-examples/python/python+slow+print)
+-   For information about methods, I used [Hackerearth]https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/
      
