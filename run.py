@@ -15,7 +15,7 @@ def slowprint(strings):
 	for text_c in strings + '\n \n':
 		sys.stdout.write(text_c)
 		sys.stdout.flush()
-		time.sleep(1./20)
+		time.sleep(0./20)
 
 
 def spacing():
@@ -291,13 +291,83 @@ def distress_beacon_select():
 
     if distress_beacon_input == "yes":
         slowprint(distress_beacon_choices.choice_yes)
-        pirate_dogfight_mission()
+        planet_invasion_storyline()
     elif distress_beacon_input == "no":
         slowprint(distress_beacon_choices.choice_no)
-        bounty_hunt_mission()
+        bounty_hunt_storyline()
     else:
         slowprint(distress_beacon_choices.choice_else)
         distress_beacon_select()
+
+def planet_invasion_storyline():
+    """
+    Displays planet invasion storyline to the user
+    """
+    slowprint("\n"
+    "You know you are ready to take the next step in assisting the galaxy \n"
+    "*The friendly alien sees you nod your head* \n"
+    )
+    slowprint("\n"
+    "*The ship sparks back to life* 'Your ship looks outdated, and I don't think we have the weapons on board to take another attack' \n"
+    "'This ship is one of the top of the line fighting vessels, we would of had them if it wasn't for the EMP they hit us with...' \n"
+    "'I suggest you take our ship, Soldier. You look capable to take the Bidalgans alone, so here.' \n"
+    "*He hands you a glowing ship key* \n"
+    )
+
+    slowprint("\n"
+    "*The key resonates in your hand, it feels familiar* \n"
+    "'We will take your old ship, this is for the greater good of the galaxy. Thank you soldier.' \n"
+    "'The co-ordinates of Planet Bid are on the intercom, the ship will warp you once we dock your old ship.' \n"
+    "You nod again, knowing what must be done, the alien walks away \n"
+    "*The alien shouts* 'Good luck, you are our only hope.' \n"
+
+    )
+
+
+def ship_storyline_select():
+    """
+    Gives the user options to solve the mission
+    """
+    spacing()
+
+    ship_storyline_choices = UserNumbers(
+        "You press the big red button and there is a weird glow around the outer of the ship \n"
+        "Time bends, a black hole emerges and you appear in a new system, greeted with three purple stars \n"
+        "There is conflict everywhere, space stations covered in green hellfire",
+        "You pull the white lever and the ship sparks, time and space folds and you enter a new system \n"
+        "There are three purple stars, and the whole system is in conflict \n"
+        "You see many space stations, covered in green hellfire",
+        "Your new ship starts recalculating the route, I don't think that was a good choice... \n"
+        "*You are warped to a completely new system, the ship display reads *9288 LY from initial warp* \n"
+        "*You receive a bounty hunting mission in your system* \n",
+        "Enter 1, 2 or 3 to choose a storyline."
+
+    )
+
+
+    slowprint("\n"
+    "Your new ship looks unfamiliar, as if it is from a completely different time era than you \n"
+    "What do you do? \n"
+    "(1) Press the big red button you previously pressed \n"
+    "(2) Pull the white lever \n"
+    "(3) Press the button labelled '⎅⍜ ⋏⍜⏁ ⌿⍀⟒⌇⌇' \n")
+# Alien text comes from https://lingojam.com/AlienLanguage
+    select_answer = input("Select (1,2,3) \n")
+
+    if "1" in select_answer:
+        slowprint(ship_storyline_choices.number_one)
+        planet_invasion_storyline_two()
+    elif "2" in select_answer:
+        slowprint(ship_storyline_choices.number_two)
+        planet_invasion_storyline_two()
+    elif "3" in select_answer:
+        slowprint(ship_storyline_choices.number_three)
+        bounty_hunt_storyline()
+    else:
+        slowprint(ship_storyline_choices.number_else)
+        ship_storyline_select()
+
+    spacing()
 # Add flaming sword to planet bid tower of rin and add code (2681 combination) question
 def exit_game_select():
     """
@@ -334,6 +404,7 @@ def second_functions():
     first_ship_storyline()
     distress_beacon_mission()
     distress_beacon_select()
+    ship_storyline_select()
     
 
 main()
