@@ -15,7 +15,7 @@ def slowprint(strings):
 	for text_c in strings + '\n \n':
 		sys.stdout.write(text_c)
 		sys.stdout.flush()
-		time.sleep(0/20)
+		time.sleep(1./20)
 
 
 def spacing():
@@ -25,6 +25,39 @@ def spacing():
     print()
 
 spacing()
+# ASCII art taken from https://www.asciiart.eu/space/spaceships and https://patorjk.com/software/taag/#p=testall&f=4Max&t=Space%20Adventure
+print(r"""
+
+              _               _                    
+             /_`_  _  _  _   /_/ _/  _  _ _/_   __ 
+            ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
+              /                                    
+
+     .  . '    .
+      '   .            . '            .                +
+              `                          '    . '
+        .                         ,'`.                         .
+   .                  .."    _.-;'    `.              .
+              _.-"`.##%"_.--" ,'        `.           "#"     ___,,od000
+           ,'"-_ _.-.--"\   ,'            `-_       '%#%',,/////00000HH
+         ,'     |_.'     )`/-     __..--""`-_`-._    J L/////00000HHHHM
+ . +   ,'   _.-"        / /   _-""           `-._`-_/___\///0000HHHHMMM
+     .'_.-""      '    :_/_.-'                 _,`-/__V__\0000HHHHHMMMM
+ . _-""                         .        '   _,////\  |  /000HHHHHMMMMM
+_-"   .       '  +  .              .        ,//////0\ | /00HHHHHHHMMMMM
+       `                                   ,//////000\|/00HHHHHHHMMMMMM
+.             '       .  ' .   .       '  ,//////00000|00HHHHHHHHMMMMMM
+     .             .    .    '           ,//////000000|00HHHHHHHMMMMMMM
+                  .  '      .       .   ,///////000000|0HHHHHHHHMMMMMMM
+  '             '        .    '         ///////000000000HHHHHHHHMMMMMMM
+                    +  .  . '    .     ,///////000000000HHHHHHHMMMMMMMM
+     '      .              '   .       ///////000000000HHHHHHHHMMMMMMMM
+   '                  . '              ///////000000000HHHHHHHHMMMMMMMM
+                           .   '      ,///////000000000HHHHHHHHMMMMMMMM
+       +         .        '   .    .  ////////000000000HHHHHHHHMMMMMMhs
+
+""")
+
 
 def game_prologue():
     """
@@ -46,15 +79,15 @@ def start_game_select():
     Gives user options to start or end game
     """
     spacing()
-
+    
     start_game_choices = UserChoices(
         "*spooling* Whirring up engines *humming* \n",
         "Shutting down systems \n",
         "To start or exit the game, enter the text 'yes' or 'no'. \n"
         )
-    
+
     start_game_input = input("Would you like to launch captain? yes/no \n")
-    
+
     spacing()
 
     if start_game_input == "yes":
@@ -228,7 +261,7 @@ def distress_beacon_storyline():
     """
     slowprint("\n"
     "There is an eerie silence... what were they? \n"
-    "*cockpit door clonks and beeps, the alien over the phone emerges* \n"
+    "*cockpit door clonks and beeps, the alien over the ship intercom emerges* \n"
     )
 
     slowprint("\n"
@@ -266,7 +299,7 @@ def distress_beacon_select():
     else:
         slowprint(distress_beacon_choices.choice_else)
         distress_beacon_select()
-
+# Add flaming sword to planet bid tower of rin
 def exit_game_select():
     """
     Player can exit game by pressing X
@@ -301,7 +334,6 @@ def second_functions():
     weapon_select()
     first_ship_storyline()
     distress_beacon_mission()
-    # distress_beacon_storyline()
     distress_beacon_select()
     
 
