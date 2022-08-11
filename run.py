@@ -28,11 +28,6 @@ spacing()
 # ASCII art taken from https://www.asciiart.eu/space/spaceships and https://patorjk.com/software/taag/#p=testall&f=4Max&t=Space%20Adventure
 print(r"""
 
-              _               _                    
-             /_`_  _  _  _   /_/ _/  _  _ _/_   __ 
-            ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
-              /                                    
-
      .  . '    .
       '   .            . '            .                +
               `                          '    . '
@@ -56,6 +51,10 @@ _-"   .       '  +  .              .        ,//////0\ | /00HHHHHHHMMMMM
                            .   '      ,///////000000000HHHHHHHHMMMMMMMM
        +         .        '   .    .  ////////000000000HHHHHHHHMMMMMMhs
 
+                  _               _                    
+                 /_`_  _  _  _   /_/ _/  _  _ _/_   __ 
+                ._//_//_|/_ /_' / //_/|//_'/ // /_///_'                      
+                  /  
 """)
 
 
@@ -79,7 +78,7 @@ def start_game_select():
     Gives user options to start or end game
     """
     spacing()
-    
+
     start_game_choices = UserChoices(
         "*spooling* Whirring up engines *humming* \n",
         "Shutting down systems \n",
@@ -299,7 +298,7 @@ def distress_beacon_select():
     else:
         slowprint(distress_beacon_choices.choice_else)
         distress_beacon_select()
-# Add flaming sword to planet bid tower of rin
+# Add flaming sword to planet bid tower of rin and add code (2681 combination) question
 def exit_game_select():
     """
     Player can exit game by pressing X
