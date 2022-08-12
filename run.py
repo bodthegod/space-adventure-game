@@ -531,6 +531,45 @@ def final_mission_select():
 #  (2681 combination) question
 
 
+def final_mission_win():
+    """
+    Displays the final mission win text to user
+    """
+    slowprint("\n"
+              "He grunts at you, in disbelief \n"
+              "'What are you doing, Human?' \n"
+              "*A flaming sword pierces through the floor* \n"
+              "You:'I am ready, Bidas.' \n")
+
+    slowprint("\n"
+              "*He charges towards you, but you dodge him* \n"
+              "*You raise the sword, scathing and melting his armour* \n"
+              "You: 'This is for the galaxy.' \n"
+              "*You pierce his armour, he falls* \n"
+              "'This won't solve anything, Human...'\n")
+    slowprint("\n"
+              "... \n"
+              "*You transmit a call to your alien friend* \n"
+              "You: 'He's dead.' \n"
+              "'You did it? Thank you Soldier' \n"
+              "'Regroup with us...'\n")
+
+    slowprint("\n"
+              "With the galaxy in peril, you brought peace to it. \n"
+              "You made a friend along the way. \n"
+              "And made some dangerous decisions \n"
+              "Good job player. \n"
+              "You Win! \n")
+
+    slowprint(r"""
+                  _               __
+                 /_`_  _  _  _   /_/ _/  _  _ _/_   __
+                ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
+                  /
+    """)
+    exit_game()
+
+
 def exit_game_select():
     """
     Player can exit game by pressing X
