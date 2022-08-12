@@ -371,7 +371,7 @@ def ship_storyline_select():
     """
     Gives the user options to solve the mission
     """
-    spacing()
+
 
     ship_storyline_choices = UserNumbers(
         "You press the big red button and there is a weird glow around"
@@ -394,7 +394,6 @@ def ship_storyline_select():
         " bounty hunt mission \n",
         "Enter 1, 2 or 3 to choose a storyline.")
 
-    spacing()
 
     slowprint("\n"
               "Your new ship looks unfamiliar, as if it is from a"
@@ -407,6 +406,8 @@ def ship_storyline_select():
               "(3) Press the button labelled '⎅⍜ ⋏⍜⏁ ⌿⍀⟒⌇⌇' \n")
 # Alien text comes from https://lingojam.com/AlienLanguage
     select_answer = input("Select (1,2,3) \n")
+
+    spacing()
 
     if "1" in select_answer:
         slowprint(ship_storyline_choices.number_one)
@@ -484,6 +485,47 @@ def planet_invasion_storyline_two():
               "*You hover your ship by the landing pad, \n"
               "*The landing gear lowers* \n"
               "*Landing Successful* \n")
+    final_mission_storyline()
+
+def final_mission_storyline():
+    """
+    Displays final mission storyline to the user
+    """
+    slowprint("\n"
+              "*You walk out of the ship, and through the golden arch* \n"
+              "*You look and see a fierce alien in golden plated armour* \n"
+              "'I knew you would come, you are the last of your kind.' \n"
+              "'The galaxy is ruled by me, King Bidas!' \n")
+    slowprint("\n"
+              "*Your weapon starts to overload with energy again* \n")
+
+    final_mission_select()
+    spacing()
+
+def final_mission_select():
+    """
+    Displays final mission selection choice to user
+    """
+    final_mission_choices = UserChoices(
+        "You raise your hand, ready to catch something \n",
+        "You shake your head, surrendering to the king \n",
+        "Enter the text 'yes' or 'no' to advance. \n"
+        )
+
+    final_mission_input = input("Do you want to end this, Soldier? (yes/no) \n")
+
+    spacing()
+
+    if final_mission_input == "yes":
+        slowprint(final_mission_choices.choice_yes)
+        final_mission_win()
+    elif final_mission_input == "no":
+        slowprint(final_mission_choices.choice_no)
+        final_mission_lose()
+    else:
+        slowprint(final_mission_choices.choice_else)
+        final_mission_select()    
+
 
 # Add flaming sword to planet bid tower of rin and add code
 #  (2681 combination) question
