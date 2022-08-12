@@ -414,10 +414,28 @@ def ship_storyline_select():
     spacing()
 
 
-    def planet_invasion_storyline_two():
-        """
-        Displays planet invasion storyline to the user
-        """
+def bounty_hunt_storyline():
+    """
+    Displays bounty hunt storyline to user
+    """
+    slowprint("\n"
+              "Not knowing how to get back, you take the"
+              " bounty hunt mission \n"
+              "Your terminal reads: Xenoplanet 4284B \n"
+              "Target: Borkhardt \n")
+
+    slowprint("\n"
+              "*The thrusters and shields overcharge* \n"
+              "*You boost down to the co-ordinates of the mission* \n"
+              "*You notice strange alien bio buildings* \n"
+              "This must be close. \n"
+              "The terminal reads: TARGET: 1.5KM AWAY \n")
+
+
+def planet_invasion_storyline_two():
+    """
+    Displays planet invasion storyline to the user
+    """
     slowprint("\n"
               "You approach a large red planet,"
               " covered in cityscapes \n"
@@ -426,14 +444,16 @@ def ship_storyline_select():
 
     slowprint("\n"
               "*The thrusters and shields overcharge* \n"
-              "*Boosting down to the giant cityscape, you notice signs on the buildings* \n"
+              "*You boost down to the giant cityscape* \n"
+              "*You notice signs on the buildings* \n"
               "The sign has an image of a powerful alien, and reads: \n"
               "☍⟟⋏☌ ⏚⟟⎅⏃⌇ *Translated*: King Bidas, Destroyer of Worlds \n")
-    
+
     slowprint("\n"
               "*You set course for the main building with gold crests* \n"
               "The defence turrets have been disengaged, but why? \n"
-              "*You hover your ship above the landing pad, and lower your landing gear* \n"
+              "*You hover your ship by the landing pad, \n"
+              "*The landing gear lowers* \n"
               "*Landing Successful* \n")
 
 # Add flaming sword to planet bid tower of rin and add code
