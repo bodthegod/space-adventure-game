@@ -11,7 +11,12 @@ from choices import UserNumbers
 # slowprint taken from
 # https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing
 # and https://www.codegrepper.com/code-examples/python/python+slow+print
+
+
 def slowprint(strings):
+    """
+    Creates slowprint for gameplay aspect
+    """
     for text_c in strings + '\n \n':
         sys.stdout.write(text_c)
         sys.stdout.flush()
@@ -23,6 +28,7 @@ def spacing():
     Creates spacing between dialogue to improve readability of game
     """
     print()
+
 
 spacing()
 # ASCII art taken from https://www.asciiart.eu/space/spaceships
@@ -358,6 +364,8 @@ def planet_invasion_storyline():
               " walks away \n"
               "*The alien shouts* 'Good luck, you are our only hope.' \n")
 
+    ship_storyline_select()
+
 
 def ship_storyline_select():
     """
@@ -381,15 +389,17 @@ def ship_storyline_select():
         " that was a good choice... \n"
         "*You are warped to a completely new system, the ship display"
         " reads *9288 LY from initial warp* \n"
-        "*You receive a bounty hunting mission on your terminal* \n",
-        "Enter 1, 2 or 3 to choose a storyline."
+        "*You receive a bounty hunting mission on your terminal* \n"
+        "Not knowing how to get back, you take the"
+        " bounty hunt mission \n",
+        "Enter 1, 2 or 3 to choose a storyline.")
 
-    )
+    spacing()
 
     slowprint("\n"
               "Your new ship looks unfamiliar, as if it is from a"
               " completely different"
-              "time era than you \n"
+              " time era than you \n"
               "What do you do? \n")
     slowprint("\n"
               "(1) Press the big red button you previously pressed \n"
@@ -419,8 +429,27 @@ def bounty_hunt_storyline():
     Displays bounty hunt storyline to user
     """
     slowprint("\n"
-              "Not knowing how to get back, you take the"
-              " bounty hunt mission \n"
+              "*The alien looks at you, confused* \n"
+              "'Suit yourself, Soldier.' \n"
+              "*He hands you some credits and you enter your ship* \n")
+
+    slowprint("\n"
+              "*Sat down at the cockpit, a mission appears*  \n"
+              "The mission reads: Bounty Hunt [9288 LY] \n"
+              "*You accept*\n")
+
+    slowprint("\n"
+              "*The Hyperdrive module powers up* \n"
+              "*whirring* 'Launching in 3, 2, 1' \n"
+              "*You appear in a new system* \n")
+    bounty_hunt_storyline_two()
+
+
+def bounty_hunt_storyline_two():
+    """
+    Displays bounty hunt second storyline to user
+    """
+    slowprint("\n"
               "Your terminal reads: Xenoplanet 4284B \n"
               "Target: Borkhardt \n")
 
@@ -495,7 +524,6 @@ def second_functions():
     first_ship_storyline()
     distress_beacon_mission()
     distress_beacon_select()
-    ship_storyline_select()
 
 
 main()
