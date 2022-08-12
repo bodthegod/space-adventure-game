@@ -47,12 +47,7 @@ _-"   .       '  +  .              .        ,//////0\ | /00HHHHHHHMMMMM
                   .  '      .       .   ,///////000000|0HHHHHHHHMMMMMMM
   '             '        .    '         ///////000000000HHHHHHHHMMMMMMM
                     +  .  . '    .     ,///////000000000HHHHHHHMMMMMMMM
-     '      .              '   .       ///////000000000HHHHHHHHMMMMMMMM
-   '                  . '              ///////000000000HHHHHHHHMMMMMMMM
-                           .   '      ,///////000000000HHHHHHHHMMMMMMMM
-       +         .        '   .    .  ////////000000000HHHHHHHHMMMMMMhs
-
-                  _
+                  _               __
                  /_`_  _  _  _   /_/ _/  _  _ _/_   __
                 ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
                   /
@@ -67,14 +62,15 @@ def game_prologue():
 
     slowprint(
         "\n"
-        "incoming transmission... \n"
+        "/incoming transmission.../ \n"
         "*bzzt* Survivor? Are you there? *bzzt* \n"
-        "*bzzt* We have been waiting for you to wake up *bzzt* \n"
+        "*bzzt* We have been waiting for you to wake up. *bzzt* \n"
+        "*bzzt "
         "The Galaxy is in dire need of your help. *bzzt* \n"
         "*bzzt* We know you have the skills to assist the Galaxy. *bzzt* \n"
-        "*bzzt* We are sending you the distress beaconco-ordinates now"
-        "*bzzt* \n"
-        "end of transmission \n"
+        "*bzzt* We are sending you the distress beacon co-ordinates now"
+        " *bzzt* \n"
+        "/end of transmission/ \n"
     )
 
 
@@ -116,7 +112,7 @@ def game_instructions_select():
         "Please select yes or no. \n")
 
     game_instructions_input = input("Do you want to hear the story of the"
-                                    "galaxy before you begin? (yes/no) \n")
+                                    " galaxy before you begin? (yes/no) \n")
 
     spacing()
 
@@ -140,7 +136,7 @@ def game_instructions():
               "You awake from a cryofrozen chamber inside your ancient"
               " ship... \n"
               "Your ship is outdated as you have been frozen for over"
-              "500 years... \n")
+              " 500 years... \n")
 
     slowprint("\n"
               "You are the last Super Soldier... \n"
@@ -212,10 +208,10 @@ def first_ship_storyline():
     Displays first ship storyline to user
     """
     slowprint("\n"
-              "*bzzt* That's it, you remember how to start "
+              "*bzzt* That's it, you remember how to start"
               " one of these, don't you? *bzzt* \n"
               "*bzzt* You don't? just hit that big red button..."
-              " *clonk* woahhhh! *bzzt* \n"
+              " *bzzt* *clonk* \n"
               "*Female AI voice* 'Quantum travel initiated' *spooling* \n")
 
     slowprint("\n"
@@ -223,13 +219,15 @@ def first_ship_storyline():
               " of the distress beacon* \n"
               "*Time stops, the ship warps and a second later you appear"
               " in a new solar system* \n"
+              "/incoming transmission/"
               "*bzzt* Is that you? *bzzt* \n")
 
     slowprint("\n"
-              "You: 'Yeah, it's me.' \n"
+              "You: 'Yeah, it's me.'\n"
               "*bzzt* Finally!, we're under attack and there are bidalgan"
               " pirates boarding our ship! *bzzt* \n"
-              "You: 'I'm docking now' / end of transmission \n")
+              "You: 'I'm docking now' \n"
+              "/end of transmission/ \n")
 
 
 def distress_beacon_mission():
@@ -383,7 +381,7 @@ def ship_storyline_select():
         " that was a good choice... \n"
         "*You are warped to a completely new system, the ship display"
         " reads *9288 LY from initial warp* \n"
-        "*You receive a bounty hunting mission in your system* \n",
+        "*You receive a bounty hunting mission on your terminal* \n",
         "Enter 1, 2 or 3 to choose a storyline."
 
     )
@@ -414,6 +412,30 @@ def ship_storyline_select():
         ship_storyline_select()
 
     spacing()
+
+
+    def planet_invasion_storyline_two():
+        """
+        Displays planet invasion storyline to the user
+        """
+    slowprint("\n"
+              "You approach a large red planet,"
+              " covered in cityscapes \n"
+              "*Your terminal reads: Planet ⏚⟟⎅* \n"
+              "'Max power to thrusters, shield overcharge engage' \n")
+
+    slowprint("\n"
+              "*The thrusters and shields overcharge* \n"
+              "*Boosting down to the giant cityscape, you notice signs on the buildings* \n"
+              "The sign has an image of a powerful alien, and reads: \n"
+              "☍⟟⋏☌ ⏚⟟⎅⏃⌇ *Translated*: King Bidas, Destroyer of Worlds \n")
+    
+    slowprint("\n"
+              "*You set course for the main building with gold crests* \n"
+              "The defence turrets have been disengaged, but why? \n"
+              "*You hover your ship above the landing pad, and lower your landing gear* \n"
+              "*Landing Successful* \n")
+
 # Add flaming sword to planet bid tower of rin and add code
 #  (2681 combination) question
 
