@@ -449,10 +449,82 @@ def bounty_hunt_storyline_two():
               "This must be close. \n"
               "The terminal reads: TARGET: 1.5KM AWAY \n")
 
+    slowprint("\n"
+              "*You see large amounts of bio-mass on the structures* \n"
+              "This doesn't look right... \n"
+              "The entire area seems quarantined and infected \n"
+              "*You approach the bounty chip* \n"
+              "The terminal reads: TARGET: 150M AWAY \n")
+
+    slowprint("\n"
+              "*The bounty is inside a large building* \n"
+              "This is it. \n"
+              "*The landing gear lowers* \n"
+              "*Landing Successful* \n")
+    bounty_final_mission_storyline()
+
+
+def bounty_final_mission_storyline():
+    """
+    Displays bounty final mission storyline to the user
+    """
+    slowprint("\n"
+              "*You exit the ship, and approach the infected building* \n"
+              "*You see a large alien creature* \n"
+              "You realise the chip is inside of it... \n"
+              "'Oh no...' \n")
+    slowprint("\n"
+              "*Your weapon makes a strange noise* \n")
+
+    bounty_final_mission_select()
+    spacing()
+
+
+def bounty_final_mission_select():
+    """
+    Gives the user options to solve the mission
+    """
+
+    bounty_final_mission_choices = UserNumbers(
+        "Your weapon overloads with energy and defeats it \n",
+        "You turn and run, the creature quickly catches you \n"
+        "You attempt to fend it off but it defeats you.",
+        "You attempt to distract the creature \n"
+        "*You throw your weapon* \n"
+        "You are defeated.",
+        "Enter 1, 2 or 3 to make your decision.")
+
+    slowprint("\n"
+              "The creature charges at you \n"
+              "What do you do? \n")
+    slowprint("\n"
+              "(1) Fire your weapon at the creature \n"
+              "(2) Run from the creature \n"
+              "(3) Distract the creature \n")
+
+    select_answer = input("Select (1,2,3) \n")
+
+    spacing()
+
+    if "1" in select_answer:
+        slowprint(bounty_final_mission_choices.number_one)
+        planet_invasion_storyline_two()
+    elif "2" in select_answer:
+        slowprint(bounty_final_mission_choices.number_two)
+        exit_game()
+    elif "3" in select_answer:
+        slowprint(bounty_final_mission_choices.number_three)
+        exit_game()
+    else:
+        slowprint(bounty_final_mission_choices.number_else)
+        bounty_final_mission_select()
+
+    spacing()
+
 
 def planet_invasion_storyline_two():
     """
-    Displays planet invasion storyline to the user
+    Displays planet invasion second storyline to the user
     """
     slowprint("\n"
               "You approach a large red planet,"
@@ -514,7 +586,7 @@ def final_mission_select():
         final_mission_lose()
     else:
         slowprint(final_mission_choices.choice_else)
-        final_mission_select()    
+        final_mission_select() 
 
 
 # Add flaming sword to planet bid tower of rin and add code
