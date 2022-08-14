@@ -162,19 +162,23 @@ def weapon_text():
     """
     Requests the player if they want the weapon to be selected
     """
+    weapon_text_choices = UserChoices(
+        "Your weapon shifts and clicks into gear,"
+        " whirring ready to fire. \n",
+        "I can't help the galaxy without a weapon... \n",
+        "Please select yes or no \n")
     request_weapon = input("It's time to walk over to the arsenal, would you"
                            " like to choose a weapon? (yes/no)\n")
 
     spacing()
 
     if request_weapon == "yes":
-        slowprint("Your weapon shifts and clicks into gear,"
-                  " whirring ready to fire. \n")
+        slowprint(weapon_text_choices.choice_yes)
     elif request_weapon == "no":
-        slowprint("I can't help the galaxy without a weapon... \n")
+        slowprint(weapon_text_choices.choice_no)
         exit_game()
     else:
-        slowprint("Please select yes or no \n")
+        slowprint(weapon_text_choices.choice_else)
         weapon_text()
 
 
