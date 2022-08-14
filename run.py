@@ -405,7 +405,7 @@ def ship_storyline_select():
         planet_invasion_storyline_two()
     elif "3" in select_answer:
         slowprint(ship_storyline_choices.number_three)
-        bounty_hunt_storyline()
+        bounty_hunt_storyline_two()
     else:
         slowprint(ship_storyline_choices.number_else)
         ship_storyline_select()
@@ -429,7 +429,7 @@ def bounty_hunt_storyline():
 
     slowprint("\n"
               "*The Hyperdrive module powers up* \n"
-              "*whirring* 'Launching in 3, 2, 1' \n"
+              "*whirring* 'Launching in 3, 2, 1.' \n"
               "*You appear in a new system* \n")
     bounty_hunt_storyline_two()
 
@@ -486,7 +486,7 @@ def bounty_final_mission_select():
     """
 
     bounty_final_mission_choices = UserNumbers(
-        "Your weapon overloads with energy and defeats it \n",
+        "Your weapon overloads with energy and damages it \n",
         "You turn and run, the creature quickly catches you \n"
         "You attempt to fend it off but it defeats you.",
         "You attempt to distract the creature \n"
@@ -508,7 +508,7 @@ def bounty_final_mission_select():
 
     if "1" in select_answer:
         slowprint(bounty_final_mission_choices.number_one)
-        planet_invasion_storyline_two()
+        bounty_final_mission_win()
     elif "2" in select_answer:
         slowprint(bounty_final_mission_choices.number_two)
         exit_game()
@@ -522,6 +522,45 @@ def bounty_final_mission_select():
     spacing()
 
 
+def bounty_final_mission_win():
+    """
+    Displays the final mission win text to user
+    """
+    slowprint("\n"
+              "*You injure the creature's 7 limbs* \n"
+              "*The creature charges towards you, hurt* \n"
+              "*You narrowly dodge the creature, your weapon glowing* \n"
+              "*Your weapon overcharges *humms* \n")
+
+    slowprint("\n"
+              "*You raise your weapon, eliminating the creature* \n"
+              "Your weapon gains power related to the danger... \n"
+              "You: 'That was not easy.' \n"
+              "*You grab the bounty chip, belonging to a human* \n"
+              "You: 'This is one of my own...' \n")
+
+    slowprint("\n"
+              "... \n"
+              "*You transmit a call to the alien from the distress beacon* \n"
+              "You: 'I have new information about my kind.' \n"
+              "*bzzt* 'Really?' *bzzt* \n"
+              "*bzzt* 'Regroup with us... *bzzt*' \n")
+
+    slowprint("\n"
+              "You made some interesting choices. \n"
+              "You learned about the power of your kind. \n"
+              "Defeated a powerful creature, and had fun. \n"
+              "Well done player. \n")
+
+    slowprint(r"""
+                  _               __
+                 /_`_  _  _  _   /_/ _/  _  _ _/_   __
+                ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
+                  /
+    """)
+    won_game()
+
+
 def planet_invasion_storyline_two():
     """
     Displays planet invasion second storyline to the user
@@ -530,7 +569,7 @@ def planet_invasion_storyline_two():
               "You approach a large red planet,"
               " covered in cityscapes \n"
               "*Your terminal reads: Planet ⏚⟟⎅* \n"
-              "'Max power to thrusters, shield overcharge engage' \n")
+              "You: 'Max power to thrusters, shield overcharge engage.' \n")
 
     slowprint("\n"
               "*The thrusters and shields overcharge* \n"
@@ -569,12 +608,13 @@ def final_mission_select():
     Displays final mission selection choice to user
     """
     final_mission_choices = UserChoices(
-        "You raise your hand, ready to catch something \n",
-        "You shake your head, surrendering to the king \n",
+        "You raise your hand, ready to catch something. \n",
+        "You shake your head, surrendering to the king. \n"
+        "The king captures and imprisons you. \n",
         "Enter the text 'yes' or 'no' to advance. \n"
         )
 
-    final_mission_input = input("Do you want to end this, Soldier? (yes/no) \n")
+    final_mission_input = input("Do you want to end this, Soldier? (yes/no)\n")
 
     spacing()
 
@@ -583,7 +623,7 @@ def final_mission_select():
         final_mission_win()
     elif final_mission_input == "no":
         slowprint(final_mission_choices.choice_no)
-        final_mission_lose()
+        exit_game()
     else:
         slowprint(final_mission_choices.choice_else)
         final_mission_select() 
@@ -609,17 +649,18 @@ def final_mission_win():
               "You: 'This is for the galaxy.' \n"
               "*You pierce his armour, he falls* \n"
               "'This won't solve anything, Human...'\n")
+
     slowprint("\n"
               "... \n"
               "*You transmit a call to your alien friend* \n"
               "You: 'He's dead.' \n"
-              "'You did it? Thank you Soldier' \n"
-              "'Regroup with us...'\n")
+              "*bzzt* 'You did it? Thank you Soldier.' *bzzt* \n"
+              "*bzzt* 'Regroup with us...' *bzzt*\n")
 
     slowprint("\n"
               "With the galaxy in peril, you brought peace to it. \n"
               "You made a friend along the way. \n"
-              "And made some dangerous decisions \n"
+              "And made some dangerous decisions. \n"
               "Good job player. \n")
 
     slowprint(r"""
