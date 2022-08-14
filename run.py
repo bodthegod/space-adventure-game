@@ -1,36 +1,21 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-import sys
-import time
 import random
-from choices import UserChoices
-from choices import UserNumbers
+from choices import (
+    UserChoices,
+    UserNumbers
+)
+from settings import (
+    slowprint,
+    won_game,
+    exit_game,
+    spacing
 
-
-# slowprint taken from
-# https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing
-# and https://www.codegrepper.com/code-examples/python/python+slow+print
-
-
-def slowprint(strings):
-    """
-    Creates slowprint for gameplay aspect
-    """
-    for text_c in strings + '\n \n':
-        sys.stdout.write(text_c)
-        sys.stdout.flush()
-        time.sleep(0/20)
-
-
-def spacing():
-    """
-    Creates spacing between dialogue to improve readability of game
-    """
-    print()
-
+)
 
 spacing()
+
 # ASCII art taken from https://www.asciiart.eu/space/spaceships
 # and https://patorjk.com/software/taag/#p=testall&f=4Max&t=Space%20Adventure
 print(r"""
@@ -337,6 +322,7 @@ def planet_invasion_storyline():
     """
     Displays planet invasion storyline to the user
     """
+
     slowprint("\n"
               "You know you are ready to take the next step in"
               " assisting the galaxy \n"
@@ -372,7 +358,6 @@ def ship_storyline_select():
     Gives the user options to solve the mission
     """
 
-
     ship_storyline_choices = UserNumbers(
         "You press the big red button and there is a weird glow around"
         " the outer of the ship \n"
@@ -393,7 +378,6 @@ def ship_storyline_select():
         "Not knowing how to get back, you take the"
         " bounty hunt mission \n",
         "Enter 1, 2 or 3 to choose a storyline.")
-
 
     slowprint("\n"
               "Your new ship looks unfamiliar, as if it is from a"
@@ -487,6 +471,7 @@ def planet_invasion_storyline_two():
               "*Landing Successful* \n")
     final_mission_storyline()
 
+
 def final_mission_storyline():
     """
     Displays final mission storyline to the user
@@ -501,6 +486,7 @@ def final_mission_storyline():
 
     final_mission_select()
     spacing()
+
 
 def final_mission_select():
     """
@@ -558,8 +544,7 @@ def final_mission_win():
               "With the galaxy in peril, you brought peace to it. \n"
               "You made a friend along the way. \n"
               "And made some dangerous decisions \n"
-              "Good job player. \n"
-              "You Win! \n")
+              "Good job player. \n")
 
     slowprint(r"""
                   _               __
@@ -567,23 +552,7 @@ def final_mission_win():
                 ._//_//_|/_ /_' / //_/|//_'/ // /_///_'
                   /
     """)
-    exit_game()
-
-
-def exit_game_select():
-    """
-    Player can exit game by pressing X
-    """
-    user_button = input(" ")
-    if "x" in user_button:
-        exit_game()
-
-
-def exit_game():
-    """
-    Exits game
-    """
-    sys.exit()
+    won_game()
 
 
 def main():
@@ -597,7 +566,9 @@ def main():
 
 
 def second_functions():
-
+    """
+    Secondary functions that are required to run after main
+    """
     choose_char_name()
     char_class_info()
     weapon_text()
@@ -608,4 +579,3 @@ def second_functions():
 
 
 main()
-exit_game_select()
