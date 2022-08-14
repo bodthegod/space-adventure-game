@@ -7,6 +7,8 @@ import time
 # slowprint taken from
 # https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing
 # and https://www.codegrepper.com/code-examples/python/python+slow+print
+
+
 def slowprint(strings):
     """
     Creates slowprint for gameplay aspect
@@ -14,7 +16,7 @@ def slowprint(strings):
     for text_c in strings + '\n \n':
         sys.stdout.write(text_c)
         sys.stdout.flush()
-        time.sleep(0/20)
+        time.sleep(1./20)
 
 
 def won_game():
@@ -35,6 +37,7 @@ def exit_game():
               "To try again, click the orange Run Program button. \n"
               "Quitting...")
     sys.exit()
+
 
 def spacing():
     """
