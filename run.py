@@ -54,12 +54,12 @@ def game_prologue():
     slowprint(
         "\n"
         "/incoming transmission.../ \n"
-        "*bzzt* Survivor? Are you there? *bzzt* \n"
-        "*bzzt* We have been waiting for you to wake up. *bzzt* \n"
+        "*bzzt* 'Survivor? Are you there?' *bzzt* \n"
+        "*bzzt* 'We have been waiting for you to wake up.' *bzzt* \n"
         "*bzzt "
-        "The Galaxy is in dire need of your help. *bzzt* \n"
-        "*bzzt* We know you have the skills to assist the Galaxy. *bzzt* \n"
-        "*bzzt* We are sending you the distress beacon co-ordinates now"
+        "'The Galaxy is in dire need of your help.' *bzzt* \n"
+        "*bzzt* 'We know you have the skills to assist the Galaxy.' *bzzt* \n"
+        "*bzzt* 'We are sending you the distress beacon co-ordinates now'"
         " *bzzt* \n"
         "/end of transmission/ \n"
     )
@@ -151,11 +151,11 @@ def char_class_info():
     Prints class info and start to game lore
     """
     slowprint("\n"
-              "*bzzt* Hey, you! *bzzt* \n"
-              "*bzzt* In order to reclaim the galaxy, you may need"
-              " one of these! *bzzt* \n"
-              "*bzzt* Walk over there to your arsenal and allow it"
-              " to choose you. *bzzt* \n")
+              "*bzzt* 'Hey, you!' *bzzt* \n"
+              "*bzzt* 'In order to reclaim the galaxy, you may need"
+              " one of these!' *bzzt* \n"
+              "*bzzt* 'Walk over there to your arsenal and allow it"
+              " to choose you.' *bzzt* \n")
 
 
 def weapon_text():
@@ -167,7 +167,7 @@ def weapon_text():
         " whirring ready to fire. \n",
         "I can't help the galaxy without a weapon... \n",
         "Please select yes or no \n")
-    request_weapon = input("It's time to walk over to the arsenal, would you"
+    request_weapon = input("It's time to go to the arsenal, would you"
                            " like to choose a weapon? (yes/no)\n")
 
     spacing()
@@ -203,24 +203,24 @@ def first_ship_storyline():
     Displays first ship storyline to user
     """
     slowprint("\n"
-              "*bzzt* That's it, you remember how to start"
-              " one of these, don't you? *bzzt* \n"
-              "*bzzt* You don't? just hit that big red button..."
+              "*bzzt* 'That's it, you remember how to start"
+              " one of these, don't you?' *bzzt* \n"
+              "*bzzt* 'You don't? just hit that big red button...'"
               " *bzzt* *clonk* \n"
               "*Female AI voice* 'Quantum travel initiated' *spooling* \n")
 
     slowprint("\n"
-              "*The ship sparks and sputters, inputting the co-ordinates"
+              "*The ship sparks and sputters, inputs the co-ordinates"
               " of the distress beacon* \n"
               "*Time stops, the ship warps and a second later you appear"
               " in a new solar system* \n"
-              "/incoming transmission/"
-              "*bzzt* Is that you? *bzzt* \n")
+              "/incoming transmission/ \n"
+              "*bzzt* 'Is that you?' *bzzt* \n")
 
     slowprint("\n"
               "You: 'Yeah, it's me.'\n"
-              "*bzzt* Finally!, we're under attack and there are bidalgan"
-              " pirates boarding our ship! *bzzt* \n"
+              "*bzzt* 'Finally!, we're under attack!' *bzzt* \n"
+              "*bzzt* 'There are bidalgan pirates boarding our ship!' *bzzt* \n"
               "You: 'I'm docking now' \n"
               "/end of transmission/ \n")
 
@@ -240,14 +240,15 @@ def distress_beacon_mission():
         "You wait and listen, hearing alien noises and footsteps towards"
         " you \n"
         "Your weapon overloads with energy, firing at it's own will and"
-        " eliminates the targets \n"
+        " eliminates the \n"
+        "targets \n"
         "You: 'What was that...' \n",
         "Enter 1, 2 or 3 to choose a route."
 
     )
 
     slowprint("\n"
-              "You dock the ship, and there are 3 pirates aiming in your"
+              "You dock the ship, there are 3 pirates aiming in your"
               " direction, what do you do? \n"
               "(1) Start an attack on the pirates \n"
               "(2) Set up an ambush \n"
@@ -281,17 +282,20 @@ def distress_beacon_storyline():
               " intercom emerges* \n")
 
     slowprint("\n"
-              "'Thank you, soldier. Our ship was taken over a few hours"
-              " ago and it's been dead in the water.'\n"
+              "'Thank you, Soldier.' \n"
+              "Our ship was taken over a few hours ago.' \n"
+              "It's been dead in the water.' \n"
               "'Bidalgan pirates are one of the most dangerous species"
-              " in the Galaxy, I saw your signature appear on my radar' \n"
+              " in the Galaxy, I saw \n"
+              "your signature appear on my radar' \n"
               "'How did you?...'\n")
 
     slowprint("\n"
               "You: 'I don't understand it either, but it's best we don't"
               " question it.' \n"
               "'We still need assistance, the Bidalgans reside on planet"
-              " Bid and they're quickly conquering all power in the galaxy' \n"
+              " Bid and they're \n"
+              "quickly conquering all power in the galaxy' \n"
               "'Will you help us?' \n")
 
 
@@ -334,22 +338,27 @@ def planet_invasion_storyline():
 
     slowprint("\n"
               "*The ship sparks back to life* 'Your ship looks outdated,"
-              " and I don't think we have the weapons on board"
+              " and I don't think \n"
+              "we have the weapons on board"
               " to take another attack' \n"
               "'This ship is one of the top of the line fighting"
               " vessels,"
-              " we would of had them if it wasn't for the EMP they hit us"
+              " we would of had them \n"
+              "if it wasn't for the EMP they hit us"
               " with...' \n"
               "'I suggest you take our ship, Soldier. You look capable to"
-              " take the Bidalgans alone, so here.' \n"
+              " take the Bidalgans \n"
+              "alone, so here.' \n"
               "*He hands you a glowing ship key* \n")
 
     slowprint("\n"
               "*The key resonates in your hand, it feels familiar* \n"
               "'We will take your old ship, this is for the greater"
-              " good of the galaxy. Thank you soldier.' \n"
+              " good of the galaxy.' \n"
+              "'Thank you soldier.' \n"
               "'The co-ordinates of Planet Bid are on the intercom,"
-              " the ship will warp you once we dock your old ship.' \n"
+              " the ship will warp you once"
+              "\nwe dock your old ship.' \n"
               "You nod again, knowing what must be done, the alien"
               " walks away \n"
               "*The alien shouts* 'Good luck, you are our only hope.' \n")
@@ -364,13 +373,16 @@ def ship_storyline_select():
 
     ship_storyline_choices = UserNumbers(
         "You press the big red button and there is a weird glow around"
-        " the outer of the ship \n"
+        " the outer of the \n"
+        "ship \n"
         "Time bends, a black hole emerges and you appear in a new system,"
-        " greeted with three purple stars \n"
+        " greeted with \n"
+        "three purple stars \n"
         "There is conflict everywhere, space stations covered in green"
         " hellfire",
         "You pull the white lever and the ship sparks, time and space"
-        " folds and you enter a new system \n"
+        " folds and you enter \n"
+        "a new system \n"
         "There are three purple stars, and the whole system is in"
         " conflict \n"
         "You see many space stations, covered in green hellfire",
@@ -385,8 +397,8 @@ def ship_storyline_select():
 
     slowprint("\n"
               "Your new ship looks unfamiliar, as if it is from a"
-              " completely different"
-              " time era than you \n"
+              " completely different \n"
+              "time era than you \n"
               "What do you do? \n")
     slowprint("\n"
               "(1) Press the big red button you previously pressed \n"
@@ -627,10 +639,6 @@ def final_mission_select():
     else:
         slowprint(final_mission_choices.choice_else)
         final_mission_select() 
-
-
-# Add flaming sword to planet bid tower of rin and add code
-#  (2681 combination) question
 
 
 def final_mission_win():
