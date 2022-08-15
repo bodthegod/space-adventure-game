@@ -220,7 +220,7 @@ def first_ship_storyline():
     slowprint("\n"
               "You: 'Yeah, it's me.'\n"
               "*bzzt* 'Finally!, we're under attack!' *bzzt* \n"
-              "*bzzt* 'There are bidalgan pirates boarding our ship!' *bzzt* \n"
+              "*bzzt* 'There are bidalgan pirates on the ship!' *bzzt*\n"
               "You: 'I'm docking now' \n"
               "/end of transmission/ \n")
 
@@ -235,7 +235,7 @@ def distress_beacon_mission():
         " in a flurry",
         "You hold the corner, the squad approach you and fire at you \n"
         "Your weapon overloads with energy, firing at it's own will and"
-        " eliminates the targets \n"
+        "\n eliminates the targets \n"
         "You: 'Woah...' \n",
         "You wait and listen, hearing alien noises and footsteps towards"
         " you \n"
@@ -638,7 +638,7 @@ def final_mission_select():
         exit_game()
     else:
         slowprint(final_mission_choices.choice_else)
-        final_mission_select() 
+        final_mission_select()
 
 
 def final_mission_win():
@@ -649,7 +649,7 @@ def final_mission_win():
               "He grunts at you, in disbelief \n"
               "'What are you doing, Human?' \n"
               "*A flaming sword pierces through the floor* \n"
-              "You:'I am ready, Bidas.' \n")
+              "You: 'I am ready, Bidas.' \n")
 
     slowprint("\n"
               "*He charges towards you, but you dodge him* \n"
