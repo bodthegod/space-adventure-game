@@ -8,7 +8,6 @@
 # Table of Contents:
 1. [About my game](#about-my-game)
     1. [How to Play](#how-to-play)
-    2. [Returning and Frequent Visitor Goals](#instructions)
 2. [Features](#features)
     1. [Existing Features](#existing-features)
     2. [Future Features](#future-features)
@@ -25,7 +24,7 @@
 7. [Credits](#credits)
     
 
-![Website Designs]()</h2>
+![Overview of Game](/assets/images/overview-game.png)</h2>
 
 ### About my game
 
@@ -46,30 +45,64 @@ This game is run on the Code Institute mock terminal on heroku.
 
 ### Existing Features
 
-- #### Button
+- ### Button
 
     ![Button](/assets/images/space-adventure-button.png)
 
     - This is the button that is already displayed via the Code Institute template I was given, which allows the user to play the game. 
-- #### Game Prologue
--   ![Game Prologue](/assets/images/)    
+
+- ### Game Prologue
+   ![Game Prologue](/assets/images/game-prologue-one.png)    
     - This is the game prologue screen that shows text art to allow the user to have a creative image of what the game is about and some basic information about the storyline.
-- #### Story Info
--   ![Story Info](/assets/images/space-adventure-first-q.png)
+   ![Game Prologue](/assets/images/game-prologue-two.png)     
+
+- ### Story Info
+   ![Story Info](/assets/images/space-adventure-first-q.png)
     - The player is shown a yes / no question asking them if they want to hear the story of the game. The user can type yes or no to progress the storyline.
-- #### Name Selection
--   ![Name Selection](/assets/images/space-adventure-name.png)
+
+- ### Name Selection
+   ![Name Selection](/assets/images/name-adventure.png)
     - The player is told to choose a name for their character, improving interactivity and immersion within the game.
-- #### Weapon Choice
--   ![Weapon Choice](/assets/images/)
+
+- ### Weapon Choice
+   ![Weapon Choice](/assets/images/weapon-choice-adventure.png)
     - The player is shown a yes / no question asking them if they would like to choose a weapon. This weapon is randomly selected out of a list of 4 options and then given to the user.
-- #### First Mission
--   ![First Mission](/assets/images/)
+
+- ### First Mission
+   ![First Mission](/assets/images/first-mission-adventure.png)
     - Once the player selects the weapon, the text for the first mission is displayed and lore is also displayed for the user to understand the storyline. The player is then displayed an option of three different scenarios, that advances the storyline once chosen.
-- #### Second Mission Select
--   ![Second Mission Select](/assets/images/)
+
+- ### Second Mission Select
+   ![Second Mission Select](/assets/images/second-mission-adventure.png)
     - Once the first mission is complete, the player is given a yes or no question which advances the storyline in two different paths. 
-        
+
+- ### Ship Storyline Select
+  ![Ship Storyline](/assets/images/ship-storyline-adventure.png)
+  ![Ship Storyline](/assets/images/ship-storyline-select.png)
+    - If the user selects 'Yes' to helping the galaxy, this moves them to the main storyline. This will then display a brief story to the user, and then a selection screen which advances the story yet again. This selection screen is out of 1, 2 and 3 choices. The one and two choices will advance the main storyline, and the third choice will take the user to the bounty hunt storyline (as told in the Bounty Hunt Final Mission section below).
+
+- ### Ship Storyline Final Mission
+  ![Ship Storyline Final Mission](/assets/images/ship-final-mission.png)
+    - If the user selects 1 or 2 from the section above, this will start the ship storyline final mission. The user is then presented information about the story and a choice of yes/no to defeat the final boss. If yes is selected, the user is presented with a final closing storyline and they win the game. If no is selected, the user will surrender and lose the game.
+
+  ![Ship Storyline Final Mission](/assets/images/ship-final-win.png)
+  - This is an overview of the win screen that is displayed to the user when the game is won.
+
+- ### Bounty Hunt Final Mission
+  ![Bounty Hunt Final Mission](/assets/images/bounty-final-mission.png)
+    - If the user selects 'No' to helping the galaxy, this moves them to the secondary storyline which allows them to make a final decision on the final mission of that storyline. The user is presented with a bounty hunt storyline before this, which can also be accessed when playing through the ship storyline and selecting the '(3) Press the button labelled '⎅⍜ ⋏⍜⏁ ⌿⍀⟒⌇⌇'' choice.
+
+- ### Bounty Hunt Win Screen
+  ![Bounty Hunt Win](/assets/images/bounty-win-one.png)
+    - If the user selects 1 in the final bounty hunt mission, this takes them to the bounty hunt win storyline. If number two and three are selected, the user loses the game and is given the option to play again.
+
+   ![Bounty Hunt Win](/assets/images/bounty-win-two.png)
+    - Once the final win storyline is displayed to the user, the won_game function is called and it shows that the user has won, and gives the option to replay.
+
+- ### Game Lost Screen
+  ![Game Over](/assets/images/game-over.png)
+    - If the user gets an answer wrong, this is the message that is displayed when the user loses. There are many sections within the game that will result in this message being displayed.
+
     -   #### Future Features
 
         -   A feature that could be added are inventory functions that may change the storyline depending on the item.
@@ -91,6 +124,9 @@ This game is run on the Code Institute mock terminal on heroku.
 ### Classes
 -   Classes are used on the questions within the games, to allow for multiple functions that can be called from an external file. This allows for the code to be more readable, and allows for faster development time of new questions.
 -   The classes i have created allow for the selection of numbers to be called, and selection of yes/no and else questions.
+
+### Loops
+-   I used a simple loop to enable the CLI to print gradually, using the time library. This for loop ensures that for each text character in the strings I have wrote, it prints each character individually, allowing for a readable result for the user as opposed to being presented the whole story at once. This is good UI design from a user standpoint and gives the player time to read the information as it is shown.
 
 -   ### Wireframes
         
@@ -124,23 +160,37 @@ This game is run on the Code Institute mock terminal on heroku.
 
 -   [PEP8 Validator](http://pep8online.com/)
     - Results of run.py
-    ![Results]()
+    ![Results](assets/images/PEP8-adventure-run.png)
     - Results of choices.py
-    ![Results]()
-
+    ![Results](assets/images/PEP8-adventure-choices.png)
+    - Results of settings.py
+    ![Results](assets/images/PEP8-adventure-settings.png)
 
 
 ### Validator Testing
 
--   
+-   In order to test for faults, I used the [PEP8 Online](http://pep8online.com/) valiator to view where my code was faulty, and if there were issues. Initially, I had many intendation errors, however these were very simple to fix. I also had to add a few extra empty lines above functions that I had defined in the run.py file, but yet again these issues were very minor.
+
+The validator helped me to clean up my code and make it very readable and easy to understand.
 
 ### Manual Testing
 
--   To test my code, I have checked and tested multiple different things to see if the code would function incorrectly. First, I test if the standard answers (yes/no, 1,2,3) function correctly and display the correct message by entering them. When testing this, I found that there was occasionally a bug that forced a loop of the letter 'y' in the console, to prevent this I recreated the way my functions worked by using methods.
+-   To test my code, I have checked and tested multiple different things to see if the code would function incorrectly. First, I test if the standard answers (yes/no, 1,2,3) function correctly on all options and display the correct message by entering them. When testing this, I found that there was occasionally a bug that forced a loop of the letter 'y' in the console, to prevent this I recreated the way my functions worked by using methods.
+
+As there are many different 123 and Yes/No choices throughout the game, I have provided a few screenshots to generalise the functions and how they work. Throughout the game these are all fully functional.
+![YesNo Yes](assets/images/yesno-yes-adventure.png)
+![YesNo No](assets/images/yesno-no-adventure.png)
+
+![123 One](assets/images/123-1-adventure.png)
+![123 Two](assets/images/123-2-adventure.png)
 
 -   Second of all, I tested the inputs by testing the else options- these being any characted that isn't the one defined in the input. To test this, I entered random numbers and letters to test if the else messages would appear, and I coded this correctly as there were no bugs found.
+![YesNo Else](assets/images/yesno-else-adventure.png)
+![123 Else](assets/images/123-else-adventure.png)
 
--   I showed this project to a few family members, to see if they would give me any advice from a user standpoint on things to improve, and used this information to improve the game.
+-   I showed this project to a few family members, to see if they would give me any advice from a user standpoint on things to improve, and used this information to improve the game. This advice I was given included adding seperate functions for winning the losing the game, which I added after.
+
+-   I tested the game initially without the slowprint function, however decided that as the game is a story-based adventure, the slowprint was needed to make the user experience better.
 
 ### Known Bugs
 
