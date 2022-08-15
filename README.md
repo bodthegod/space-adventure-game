@@ -175,9 +175,10 @@ The validator helped me to clean up my code and make it very readable and easy t
 
 ### Manual Testing
 
--   To test my code, I have checked and tested multiple different things to see if the code would function incorrectly. First, I test if the standard answers (yes/no, 1,2,3) function correctly on all options and display the correct message by entering them. When testing this, I found that there was occasionally a bug that forced a loop of the letter 'y' in the console, to prevent this I recreated the way my functions worked by using methods.
+-   To test my code, I have checked and tested multiple different things to see if the code would function incorrectly. First, I test if the standard answers (yes/no, 1,2,3) function correctly on all options and display the correct message by entering them. When testing this, I found that there was occasionally a bug that forced a loop of the letter 'y' in the console, to prevent this I recreated the way my functions worked by using methods. 
 
-As there are many different 123 and Yes/No choices throughout the game, I have provided a few screenshots to generalise the functions and how they work. Throughout the game these are all fully functional.
+-   As there are many different 123 and Yes/No choices throughout the game, I have provided a few screenshots to generalise the functions and how they work. Throughout the game these are all fully functional.
+
 ![YesNo Yes](assets/images/yesno-yes-adventure.png)
 ![YesNo No](assets/images/yesno-no-adventure.png)
 
@@ -185,6 +186,7 @@ As there are many different 123 and Yes/No choices throughout the game, I have p
 ![123 Two](assets/images/123-2-adventure.png)
 
 -   Second of all, I tested the inputs by testing the else options- these being any characted that isn't the one defined in the input. To test this, I entered random numbers and letters to test if the else messages would appear, and I coded this correctly as there were no bugs found.
+
 ![YesNo Else](assets/images/yesno-else-adventure.png)
 ![123 Else](assets/images/123-else-adventure.png)
 
@@ -205,8 +207,11 @@ This project was deployed using Code Institute's mock terminal for Heroku
 - Steps for deployment
     - Fork or clone this repository
     - Create a new Heroku app
+    ![Heroku App](/assets/images/heroku-create.png)
     - Set the buildpacks to Python and NodeJS in that order
+    ![Buildpack](/assets/images/buildpacks.png)
     - Link the Heroku app to the repo
+    ![Deploy](/assets/images/deploy.png)
     - Click on Deploy
 
 
@@ -217,3 +222,4 @@ This project was deployed using Code Institute's mock terminal for Heroku
 -   For information about methods, I used [Hackerearth](https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/)
 -   Alien text comes from [Lingojam](https://lingojam.com/AlienLanguage)
 -   ASCII art taken from [ASCIIart](https://www.asciiart.eu/space/spaceships) and [Patorjk](https://patorjk.com/software/taag/#p=testall&f=4Max&t=Space%20Adventure)
+-   Credits to my mentor Darío for assisting me in ideas and giving inspiration.
