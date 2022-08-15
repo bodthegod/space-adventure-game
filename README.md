@@ -2,8 +2,8 @@
 
 ## - By Joe Playdon
  
-### [View the live project here](https://bodthegod.github.io/codequiz/) #
-### [View the repository here](https://bod-space-adventure.herokuapp.com/) #
+### [View the live project here](https://bod-space-adventure.herokuapp.com/) #
+### [View the repository here](https://github.com/bodthegod/space-adventure-game) #
 
 # Table of Contents:
 1. [About my game](#about-my-game)
