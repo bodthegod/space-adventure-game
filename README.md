@@ -14,7 +14,6 @@
     2. [Future Features](#future-features)
     3. [Data Model](#data-model)
 	4. [Wireframes](#wireframes)
-    5. [Screenshots of Features](#screenshots-and-features-within-website)
 3. [Languages and Resources](#languages-used)
 4. [Testing](#testing)
     1. [Python Validator Results](#python-results)
@@ -165,5 +164,6 @@ This project was deployed using Code Institute's mock terminal for Heroku
 ## Credits
 
 -   For the gradual slowprint code, this was taken and inspired by [Stack Overflow](https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing) and [Codegrepper](https://www.codegrepper.com/code-examples/python/python+slow+print)
--   For information about methods, I used [Hackerearth]https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/
-     
+-   For information about methods, I used [Hackerearth](https://www.hackerearth.com/practice/python/object-oriented-programming/classes-and-objects-i/tutorial/)
+-   Alien text comes from [Lingojam](https://lingojam.com/AlienLanguage)
+-   ASCII art taken from [ASCIIart](https://www.asciiart.eu/space/spaceships) and [Patorjk](https://patorjk.com/software/taag/#p=testall&f=4Max&t=Space%20Adventure)
