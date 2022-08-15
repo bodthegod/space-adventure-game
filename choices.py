@@ -40,36 +40,9 @@ class UserNumbers:
     """
     def __init__(self, number_one, number_two, number_three, number_else):
         """
-        Instancing 1, 2 and 3 number selection 
+        Instancing 1, 2 and 3 number selection
         """
         self.number_one = number_one
         self.number_two = number_two
         self.number_three = number_three
         self.number_else = number_else
-
-
-    def number_one(self):
-        """
-        Function runs if user selects 1
-        """
-        return f"\n{self.number_one} \n"
-
-
-    def number_two(self):
-        """
-        Function runs if user selects 2
-        """
-        return f"\n{self.number_two} \n"
-
-
-    def number_three(self):
-        """
-        Function runs if user selects 3
-        """
-        return f"\n{self.number_three} \n"
-
-    def number_else(self):
-        """
-        Function runs when user selects anything other than number
-        """
-        return f"\n{self.number_else} \n"
