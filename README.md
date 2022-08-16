@@ -128,6 +128,9 @@ This game is run on the Code Institute mock terminal on heroku.
 ### Loops
 -   I used a simple loop to enable the CLI to print gradually, using the time library. This for loop ensures that for each text character in the strings I have wrote, it prints each character individually, allowing for a readable result for the user as opposed to being presented the whole story at once. This is good UI design from a user standpoint and gives the player time to read the information as it is shown.
 
+## Flow Chart
+![Flow Chart](/assets/images/Flowcharts.png)
+
 -   ### Wireframes
         
 -   I have used [Balsamiq Wireframes](https://balsamiq.com/) as my desired wireframing tool for this, and I kept the game simple by simply using the Command Line Interface to play it. It is very easy to play the game as the user is instructed on how to play, what to type etc.   
