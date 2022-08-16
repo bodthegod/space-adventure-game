@@ -1,5 +1,5 @@
 """
-Class to respond to user choices
+Class to respond to user choices and numbers
 """
 
 
